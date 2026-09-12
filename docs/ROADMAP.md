@@ -1,4 +1,4 @@
-# Roadmap — review only
+# Roadmap
 
 ## 1. External architecture generalization
 
@@ -9,8 +9,7 @@ frozen-score decision value before considering architecture-specific refitting.
 
 Proposed review outcomes are GO for sufficiently reproduced coupling/decision
 value, PARTIAL for ranking or measurement value alone, and STOP for unsupported
-transfer. These are future protocol choices, not authorized jobs or current
-scientific decisions.
+transfer. These are future protocol choices, not current scientific conclusions.
 
 ## 2. Real execution utility and quality
 
@@ -28,7 +27,3 @@ Do not extend DiT-only precision-mechanism probing indefinitely, fit a more
 complex detector to failed test outcomes, or erase the competitive Constant and
 negative one-step detector. Mechanism/measurement and limited frozen decision
 results remain useful without an allocation claim.
-
-`authorized_to_execute_followup = false`
-
-`authorized_to_push = false`

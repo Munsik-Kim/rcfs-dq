@@ -194,7 +194,6 @@ def verify():
         },
         scope="public scalar recomputation, not raw-terminal or full experiment replay",
         model_calls=0,
-        authorized_to_push=False,
     )
 
 

@@ -1,0 +1,66 @@
+name: CPU checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cpu-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.11', '3.12']
+    env:
+      CUDA_VISIBLE_DEVICES: ''
+      HF_HUB_OFFLINE: '1'
+      TRANSFORMERS_OFFLINE: '1'
+      OMP_NUM_THREADS: '2'
+      MKL_NUM_THREADS: '2'
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -c requirements/cpu-constraints.txt build setuptools wheel
+          python -m pip install --no-build-isolation -c requirements/cpu-constraints.txt ".[dev,dit]"
+          python -m pip check
+      - name: Build and install wheel
+        run: |
+          python -m build --wheel --no-isolation
+          python -m pip install --force-reinstall --no-deps dist/rcfs_dq-0.1.1-py3-none-any.whl
+      - name: Verify installed import outside checkout
+        working-directory: ${{ runner.temp }}
+        run: |
+          python -I -c 'import pathlib, sysconfig, rcfs_dq; p = pathlib.Path(rcfs_dq.__file__).resolve(); assert p.is_relative_to(pathlib.Path(sysconfig.get_paths()["purelib"]).resolve()); assert rcfs_dq.__version__ == "0.1.1"; print(p, rcfs_dq.__version__)'
+      - name: Core, regressions and public hygiene
+        run: python -m pytest -q
+      - name: Verify scalar evidence and protected hashes
+        run: python scripts/verify_evidence.py
+      - name: Offline tiny random DiT smoke
+        run: python examples/compact_dit.py
+      - name: Lint and format
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+      - name: Check protected payload unchanged
+        run: |
+          git diff --exit-code HEAD -- evidence figures configs PUBLIC_EVIDENCE_MANIFEST.json LICENSE
+          git diff --check

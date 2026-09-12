@@ -27,16 +27,32 @@ See [results](docs/RESULTS.md) for intervals and limitations and
 
 ## Reproduce the public checks
 
-With the existing dependencies described in [reproducibility](docs/REPRODUCIBILITY.md):
+Supported: Python 3.11–3.12, NumPy 1.26.x and PyTorch 2.11.x.
+From this repository, create a CPU environment:
 
 ```bash
-python -m pip install --no-index --no-deps --no-build-isolation .
-python -c "import rcfs_dq; print(rcfs_dq.__version__)"
+python3.11 -m venv .venv
+source .venv/bin/activate
+python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -c requirements/cpu-constraints.txt ".[test]"
 python scripts/verify_evidence.py
-python examples/compact_dit.py
 python -m pytest -q
 ```
 
+Optional tiny random DiT check (CPU, no checkpoint download):
+
+```bash
+python -m pip install -c requirements/cpu-constraints.txt ".[dit]"
+HF_HUB_OFFLINE=1 python examples/compact_dit.py
+```
+
+Already have the pinned dependencies? Reinstall offline:
+
+```bash
+python -m pip install --no-index --no-deps --no-build-isolation .
+```
+
+See [reproducibility](docs/REPRODUCIBILITY.md) for development and wheel checks.
 The evidence check recomputes frozen scores, decisions, regret and class-block
 intervals from supplied scalar records. It does **not** regenerate model outputs
 or verify excluded raw tensors. The tiny random DiT example is an offline CPU
@@ -66,6 +82,4 @@ and license notices when copying or redistributing them.
 
 Third-party software and model terms remain separate; see
 [attribution](docs/ATTRIBUTION.md). The project license does not remove those
-terms. GitHub publication remains subject to separate authorization.
-
-`authorized_to_push = false`.
+terms.

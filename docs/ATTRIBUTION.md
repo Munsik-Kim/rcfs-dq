@@ -30,5 +30,4 @@ NumPy, PyTorch, pytest and packaging dependencies are separately installed and
 retain their own licenses. No dataset images or evaluator model is supplied.
 This list records attribution considerations, not a legal compatibility opinion.
 The project MIT grant does not remove the DiT model's non-commercial terms or
-grant rights that belong to third parties. GitHub publication still requires
-separate authorization.
+grant rights that belong to third parties.
