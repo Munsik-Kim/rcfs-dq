@@ -18,7 +18,12 @@ class QuantizedWeight:
 
 
 def fake_quantize_per_output_channel(weight: torch.Tensor, bits: int | None) -> QuantizedWeight:
-    if weight.ndim < 2 or not weight.is_floating_point():
+    if (
+        not isinstance(weight, torch.Tensor)
+        or weight.ndim < 2
+        or not weight.is_floating_point()
+        or not weight.numel()
+    ):
         raise ValueError("A floating-point weight with output-channel dimension is required")
     if bits is not None and (type(bits) is not int or not 2 <= bits <= 16):
         raise ValueError("bits must be an integer in [2,16] or None")
@@ -28,19 +33,33 @@ def fake_quantize_per_output_channel(weight: torch.Tensor, bits: int | None) -> 
         return QuantizedWeight(weight.detach().clone(), 0, weight.numel(), 0)
     original_dtype = weight.dtype
     work = weight.detach().float()
+    if not torch.isfinite(work).all():
+        raise ValueError("Weight is outside the float32 quantization range")
+    if ((weight != 0) & (work == 0)).any():
+        raise ValueError("Nonzero weight underflows float32 quantization arithmetic")
     flat = work.reshape(work.shape[0], -1)
     qmax = 2 ** (bits - 1) - 1
     qmin = -(2 ** (bits - 1))
     absmax = flat.abs().amax(dim=1, keepdim=True)
+    if not torch.isfinite(absmax).all():
+        raise ValueError("Nonfinite quantization absmax")
     zero = absmax == 0
     scale = torch.where(zero, torch.ones_like(absmax), absmax / qmax)
-    integer_unclipped = torch.round(flat / scale)
+    if not torch.isfinite(scale).all() or (scale <= 0).any():
+        raise ValueError("Nonzero-channel quantization scale is unrepresentable")
+    normalized = flat / scale
+    if not torch.isfinite(normalized).all():
+        raise ValueError("Nonfinite normalized quantization operand")
+    integer_unclipped = torch.round(normalized)
     saturation = int(((integer_unclipped < qmin) | (integer_unclipped > qmax)).sum().item())
     integer = integer_unclipped.clamp(qmin, qmax)
     quantized = integer * scale
     quantized = torch.where(zero, torch.zeros_like(quantized), quantized)
+    value = quantized.reshape_as(work).to(original_dtype)
+    if not torch.isfinite(quantized).all() or not torch.isfinite(value).all():
+        raise ValueError("Quantized output is outside the supported dtype range")
     return QuantizedWeight(
-        quantized.reshape_as(work).to(original_dtype),
+        value,
         saturation,
         weight.numel(),
         int(zero.sum().item()),

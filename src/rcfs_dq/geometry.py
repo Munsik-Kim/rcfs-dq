@@ -15,7 +15,11 @@ def central_derivative(plus, minus, alpha):
 
 
 def lcg_ratio_of_sums(response_norms, direction_norms):
-    """sum ||central response||² / sum ||direction||², NOT a mean of ratios."""
+    """Ratio of squared-norm sums, with a scaled fallback at float64 extremes.
+
+    A true zero denominator or an unrepresentable positive ratio raises ValueError.
+    Ordinary-range inputs retain the original sum/divide arithmetic.
+    """
     a, b = (
         np.asarray(response_norms, dtype=np.float64),
         np.asarray(direction_norms, dtype=np.float64),
@@ -24,10 +28,32 @@ def lcg_ratio_of_sums(response_norms, direction_norms):
         raise ValueError("Matching nonempty norm vectors required")
     if not np.isfinite(a).all() or not np.isfinite(b).all() or (a < 0).any() or (b < 0).any():
         raise ValueError("Finite nonnegative norms required")
-    denominator = float(np.square(b).sum())
-    if denominator <= 0:
+    amax, bmax = float(a.max()), float(b.max())
+    if bmax == 0:
         raise ValueError("Zero direction energy; gain undefined")
-    return float(np.square(a).sum() / denominator)
+    if amax == 0:
+        return 0.0
+    with np.errstate(over="ignore", under="ignore", invalid="ignore", divide="ignore"):
+        aa, bb = np.square(a), np.square(b)
+        numerator, denominator = float(aa.sum()), float(bb.sum())
+        ratio = float(np.divide(numerator, denominator))
+    tiny = np.finfo(np.float64).tiny
+    lost_range = ((a > 0) & (aa < tiny)).any() or ((b > 0) & (bb < tiny)).any()
+    if not lost_range and math.isfinite(numerator) and math.isfinite(denominator):
+        if math.isfinite(ratio) and ratio > 0:
+            return ratio
+    # Separate mantissa/exponent scales avoid squaring extreme absolute norms.
+    with np.errstate(under="ignore"):
+        energy_ratio = float(np.square(a / amax).sum() / np.square(b / bmax).sum())
+    ma, ea = math.frexp(amax)
+    mb, eb = math.frexp(bmax)
+    try:
+        ratio = math.ldexp((ma / mb) ** 2 * energy_ratio, 2 * (ea - eb))
+    except OverflowError as exc:
+        raise ValueError("Gain is outside the representable float64 range") from exc
+    if not math.isfinite(ratio) or ratio <= 0:
+        raise ValueError("Gain is outside the representable float64 range")
+    return ratio
 
 
 def log_contrasts(actual, shuffled, isotropic_draws, epsilon=1e-30):

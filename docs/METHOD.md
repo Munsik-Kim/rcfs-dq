@@ -29,6 +29,19 @@ $$L_{\mathrm{state}}=\log(\mathrm{LCG}_{\mathrm{actual}}+10^{-30})
 
 The small log floor is algebraic, not an empirical numerical-noise estimate.
 
+Control inputs must be nonempty finite floating-point tensors. Donors must have
+exactly the target shape; no broadcasting is performed. Norm-matched outputs
+have independent contiguous storage, including when the donor is strided.
+A valid zero target returns zeros; a nonzero target with a zero donor is invalid.
+Channel shuffling requires a channel dimension. Unsupported norm ranges raise
+`ValueError`, and representable norm matching is checked to relative error 1e-6.
+
+LCG keeps sum-of-squares arithmetic in the ordinary float64 range. At extreme
+ranges it scales norms and combines binary exponents before forming the ratio.
+A zero response with positive direction energy has gain zero. A true zero
+denominator or a positive ratio outside representable float64 range raises
+`ValueError`; no epsilon replaces a denominator.
+
 ## Frozen score, not a fitting interface
 
 $$S_B(c)=E(c)G_c^\beta,\qquad \beta=0.6735229330314306.$$
@@ -55,6 +68,13 @@ Quantization is symmetric absmax, per output channel, using signed integer
 range [−2^(q−1), 2^(q−1)−1], float32 scaling/rounding and dequantization to the
 original weight dtype. It is **fake quantization**, not a packed execution kernel.
 The named module scope is explicit. Weights are restored even on exceptions.
+
+For q < 16, weights, FP32 operands, nonzero-channel scales and returned outputs
+must be representable and finite. Nonzero values lost during FP32 conversion,
+zero-underflowed scales and overflowing outputs raise `ValueError`; scales are
+not repaired with epsilon. All-zero channels retain the unit-scale convention.
+The identity modes (`None` or 16) clone finite inputs in their original dtype
+without FP32 conversion. Empty, integer and complex weights are unsupported.
 
 A natural intervention changes one sampler update, then restores weights for
 the unchanged native continuation. There is no state reset or fitted correction.
