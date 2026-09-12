@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "source_base_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+  "files": [
+    {
+      "path": "configs/candidates.csv",
+      "bytes": 156951,
+      "sha256": "021348083e5e032be3426b3ba84a29becb80345867614d3bc372d39ef48559ee",
+      "role": "exact string column projection; no scalar recomputation",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "021348083e5e032be3426b3ba84a29becb80345867614d3bc372d39ef48559ee",
+      "column_projection": {
+        "cell_id": "cell_id",
+        "group": "group",
+        "stage": "stage",
+        "bits": "bits",
+        "numel": "numel",
+        "packed_bits": "packed_bits",
+        "saving_bits": "saving_bits",
+        "regime": "regime",
+        "shapes": "shapes"
+      },
+      "rows": 81
+    },
+    {
+      "path": "configs/compact_dit.json",
+      "bytes": 383,
+      "sha256": "98a66f8c8cdb1632e2a18759448535c90da22006df78435afef009b034c7584c",
+      "role": "new example or historical-scope metadata; not scientific output"
+    },
+    {
+      "path": "configs/cost_sets.csv",
+      "bytes": 7061,
+      "sha256": "427df7925930f0f8db8258473194003b1178304f83813582d61a36532294219f",
+      "role": "exact string column projection; no scalar recomputation",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "bf61f56699b90aa0bd493156f3d77d530f7f2ab6431c305ea6293f36a8feb105",
+      "column_projection": {
+        "family": "family",
+        "set_id": "set_id",
+        "cell_id": "cell_id",
+        "candidate_count": "candidate_count",
+        "saving_bits": "saving_bits",
+        "packed_bits": "packed_bits"
+      },
+      "rows": 81
+    },
+    {
+      "path": "configs/frozen_predictor.json",
+      "bytes": 7321,
+      "sha256": "7c7d42eb59eb088a5e96bc4336f5614aba2097e14c04ec9e17e11d81d580cd7e",
+      "role": "whitelisted unchanged source values",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "40d69928ff78601f15927b2495acd9664b6aebcd2e5e482f01e018635f8d10be"
+    },
+    {
+      "path": "configs/reference_dit.json",
+      "bytes": 786,
+      "sha256": "610586e38d6a50f711af8656f5dbac12de0d6506675291c79fce2fb9409f1c4c",
+      "role": "new example or historical-scope metadata; not scientific output"
+    },
+    {
+      "path": "evidence/e1c/directional_replication.csv",
+      "bytes": 2759,
+      "sha256": "ca24566c8c42c85b6417c3d1ae62f0d81fbd72cf3495f8ca396a3aa2c72aa2e6",
+      "role": "byte-identical source table",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "ca24566c8c42c85b6417c3d1ae62f0d81fbd72cf3495f8ca396a3aa2c72aa2e6"
+    },
+    {
+      "path": "evidence/e1c/discovery_confirmation.csv",
+      "bytes": 10189,
+      "sha256": "6e457498abf067d015d63a5a50f4567c3ea1391b73010caa02700530d438fd4e",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "6e457498abf067d015d63a5a50f4567c3ea1391b73010caa02700530d438fd4e"
+    },
+    {
+      "path": "evidence/e1c/global_tests.csv",
+      "bytes": 911,
+      "sha256": "b314f85cc881b2b91b2a02a89e8621c30e53d332617cb3813265d1046b05b7d0",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "b314f85cc881b2b91b2a02a89e8621c30e53d332617cb3813265d1046b05b7d0"
+    },
+    {
+      "path": "evidence/e1d1/directional_contrasts.csv",
+      "bytes": 54306,
+      "sha256": "dde2705f2bb7bdb670a0b43d6c15d9e011e7b7ace9a0dccb6598ce9abb5712c4",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "dde2705f2bb7bdb670a0b43d6c15d9e011e7b7ace9a0dccb6598ce9abb5712c4"
+    },
+    {
+      "path": "evidence/e1d1/group_stage_bit_summary.csv",
+      "bytes": 9892,
+      "sha256": "945c2e98278e4e0b4432551744be1f33dd85511f6b81b6ed88a11c4814955ea3",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "945c2e98278e4e0b4432551744be1f33dd85511f6b81b6ed88a11c4814955ea3"
+    },
+    {
+      "path": "evidence/e1pred2r2/analysis_summary.json",
+      "bytes": 10743,
+      "sha256": "560319c5041f6ea9f2067fe0bef8cd5745550e3968c26d9e7e8cded398e672a3",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "560319c5041f6ea9f2067fe0bef8cd5745550e3968c26d9e7e8cded398e672a3"
+    },
+    {
+      "path": "evidence/e1pred2r2/candidate_observations.csv",
+      "bytes": 541307,
+      "sha256": "9ed386af3e565cf6ed8b4cf6119bb9126795d5b67de8900f021e06860f45d4dd",
+      "role": "exact string column projection; no scalar recomputation",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "ee6296f6189e18fa2ae93da0f55ef4175ac89e493071c75458542dd0636db394",
+      "column_projection": {
+        "class_id": "class_id",
+        "seed": "target_seed",
+        "cell_id": "cell_id",
+        "energy": "energy_score",
+        "native_Y": "natural_severity_fp16",
+        "source_B_score": "candidate_B_score"
+      },
+      "rows": 5184
+    },
+    {
+      "path": "evidence/e1pred2r2/decision_diversity.csv",
+      "bytes": 22020,
+      "sha256": "c9d8551e4c494700887966a42e556372f3733280644bb574434866b414b2ea93",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "c9d8551e4c494700887966a42e556372f3733280644bb574434866b414b2ea93"
+    },
+    {
+      "path": "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+      "bytes": 3158,
+      "sha256": "4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5"
+    },
+    {
+      "path": "evidence/e1pred2r2/predictor_pairwise_comparison.csv",
+      "bytes": 2623,
+      "sha256": "1cdaaa9bbe6b48e3884e63d6584f9d5345f021a075453c0c02796b65b6ee527c",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "1cdaaa9bbe6b48e3884e63d6584f9d5345f021a075453c0c02796b65b6ee527c"
+    },
+    {
+      "path": "evidence/e1tail0/analysis_summary.json",
+      "bytes": 732,
+      "sha256": "1c1a6c6bdabbbdf5155d62b9899dd01b83e7a7d4e4cd89793aed8d36403d640e",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "1c1a6c6bdabbbdf5155d62b9899dd01b83e7a7d4e4cd89793aed8d36403d640e"
+    },
+    {
+      "path": "evidence/e1tail0/exception_detection.csv",
+      "bytes": 328,
+      "sha256": "338d6c9e21ec5311d518f233538b80734a851c217c0b846734fa349a5c33769c",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "338d6c9e21ec5311d518f233538b80734a851c217c0b846734fa349a5c33769c"
+    },
+    {
+      "path": "evidence/e1tail0/policy_regret_summary.csv",
+      "bytes": 2352,
+      "sha256": "2ae540a69e6f5b855f8f39ab5e2f000a37d9fa1ca042ce02b00e3d18e3506e53",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "2ae540a69e6f5b855f8f39ab5e2f000a37d9fa1ca042ce02b00e3d18e3506e53"
+    },
+    {
+      "path": "figures/01_e1d1_ledg_state_w6.png",
+      "bytes": 63935,
+      "sha256": "bee1d41fa1353711b71cff313a8b7240e0edae35bffbcb6abafa6fca9442fcd4",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "bee1d41fa1353711b71cff313a8b7240e0edae35bffbcb6abafa6fca9442fcd4"
+    },
+    {
+      "path": "figures/02_e1c_discovery_vs_confirmation.png",
+      "bytes": 46885,
+      "sha256": "da15ec0a784b0e2945f8da77a19de861b0c453ce07fe3dd31955f34ae7c5ece1",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "da15ec0a784b0e2945f8da77a19de861b0c453ce07fe3dd31955f34ae7c5ece1"
+    },
+    {
+      "path": "figures/03_e1pred2r2_hybrid_vs_energy.png",
+      "bytes": 164224,
+      "sha256": "16030fb6391891a18ab35440735fe96ddda5cce0237c733fc465184ac58e8313",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "16030fb6391891a18ab35440735fe96ddda5cce0237c733fc465184ac58e8313"
+    },
+    {
+      "path": "figures/04_e1tail0_pr_roc.png",
+      "bytes": 44385,
+      "sha256": "d0800077f894db3121f3bd6e44a4c961c19ca521ac0747e3e14ba056a98d0680",
+      "role": "byte-identical supplied evidence",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "d0800077f894db3121f3bd6e44a4c961c19ca521ac0747e3e14ba056a98d0680"
+    }
+  ],
+  "scope": "Evidence, figures and configs; no raw tensors. Added CSV projections preserve source scalar strings.",
+  "source_verified_against_git_blobs": true,
+  "self_hash_excluded": true,
+  "authorized_to_push": false
+}

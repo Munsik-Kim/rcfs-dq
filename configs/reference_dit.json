@@ -1,0 +1,21 @@
+{
+  "purpose": "historical reference metadata, not an execution authorization",
+  "model_id": "facebook/DiT-XL-2-256",
+  "revision": "eab87f77abd5aef071a632f08807fbaab0b704d0",
+  "transformer_sha256": "e592d64df5a579691e65d2b245641a00bb070b652e2c5ca775cce20a729ce9d9",
+  "scheduler": "DDIMScheduler",
+  "steps": 20,
+  "eta": 0.0,
+  "cfg": false,
+  "native_dtype": "float16 mixed-internal arithmetic",
+  "weights": "per-output-channel fake quantized; original dtype restored",
+  "bits": [8, 6, 4],
+  "stages": [4, 10, 15],
+  "prediction_crop": "first latent_channels when out_channels == 2*in_channels",
+  "SDPA": "math only",
+  "TF32": false,
+  "deterministic": true,
+  "matched_cost_prefix_batch": 16,
+  "matched_cost_event_suffix_batch": 8,
+  "download_or_execute_on_import": false
+}

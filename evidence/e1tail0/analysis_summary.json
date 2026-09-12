@@ -1,0 +1,26 @@
+{
+  "bootstrap_sha": "bf303baa056f9810c9d9e403c269920bf2e1e2988082b8f9a2183738e4bd7dce",
+  "detection": {
+    "FN": 76,
+    "FNR": 0.9620253164556962,
+    "FP": 474,
+    "FPR": 0.28744693753790174,
+    "G1": false,
+    "PR_AUC_average_precision": 0.05185648960902543,
+    "ROC_AUC": 0.5936777947509423,
+    "TN": 1175,
+    "TP": 3,
+    "actionable": 117,
+    "flagged": 477,
+    "flagged_actionable": 4,
+    "negative": 1649,
+    "positive": 79,
+    "precision": 0.006289308176100629,
+    "recall": 0.0379746835443038,
+    "specificity": 0.7125530624620983
+  },
+  "independent_required": true,
+  "provisional_decision": "E1TAIL0_NO_USEFUL_EXCEPTION_SIGNAL",
+  "valid_before_independent": true,
+  "wall_seconds": 4.440040010998928
+}

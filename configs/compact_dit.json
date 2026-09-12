@@ -1,0 +1,17 @@
+{
+  "kind": "synthetic CPU smoke, not a new scientific experiment",
+  "synthetic_seed": 123,
+  "steps": 4,
+  "alpha": 0.01,
+  "transformer": {
+    "num_attention_heads": 2,
+    "attention_head_dim": 8,
+    "in_channels": 4,
+    "out_channels": 8,
+    "num_layers": 1,
+    "sample_size": 8,
+    "patch_size": 2,
+    "num_embeds_ada_norm": 1000,
+    "norm_type": "ada_norm_zero"
+  }
+}
