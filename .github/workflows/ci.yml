@@ -53,7 +53,17 @@ jobs:
       - name: Core, regressions and public hygiene
         run: python -m pytest -q
       - name: Verify scalar evidence and protected hashes
-        run: python scripts/verify_evidence.py
+        run: |
+          python scripts/verify_evidence.py
+          python -O scripts/verify_evidence.py
+      - name: Verify retrospective public audits without model execution
+        run: |
+          python scripts/audit_baselines.py --check
+          python scripts/audit_pairing_ablation.py --check
+          python scripts/verify_public_audits.py
+          python -O scripts/verify_public_audits.py
+      - name: Public secret, path and payload hygiene
+        run: python scripts/check_public_hygiene.py
       - name: Offline tiny random DiT smoke
         run: python examples/compact_dit.py
       - name: Lint and format
@@ -63,4 +73,5 @@ jobs:
       - name: Check protected payload unchanged
         run: |
           git diff --exit-code HEAD -- evidence figures configs PUBLIC_EVIDENCE_MANIFEST.json LICENSE
+          git diff --exit-code HEAD -- analysis PUBLIC_AUDIT_MANIFEST.json
           git diff --check
