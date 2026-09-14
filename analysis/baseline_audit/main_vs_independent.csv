@@ -1,0 +1,99 @@
+table,metric,key,main,independent,abs_diff,relative_diff,tolerance,scaled_error,passed,checked_rows
+baseline_results,high,"[""primary"", ""uniform_random_expected"", ""absolute_regret""]",27.700159962038196,27.700159962038192,3.552713678800501e-15,1.282560708555233e-16,2.7710159962038194e-09,1.2820978600150906e-06,True,24
+baseline_results,low,"[""primary"", ""uniform_random_expected"", ""absolute_regret""]",24.171067621730092,24.17106762173009,3.552713678800501e-15,1.469820751983072e-16,2.418106762173009e-09,1.4692129125051072e-06,True,24
+baseline_results,lower95,"[""primary"", ""uniform_random_expected"", ""absolute_regret""]",24.472403278435966,24.47240327843597,3.552713678800501e-15,1.451722431335953e-16,2.448240327843597e-09,1.4511294656802426e-06,True,24
+baseline_results,point,"[""primary"", ""constant"", ""absolute_regret""]",0.2108042844121087,0.2108042844121087,0.0,0.0,2.208042844121087e-11,0.0,True,24
+baseline_results,upper95,"[""primary"", ""constant"", ""absolute_regret""]",0.4025870736935533,0.4025870736935533,0.0,0.0,4.1258707369355335e-11,0.0,True,24
+class_differences,class_index,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",0,0,0,,0,0,True,336
+class_differences,difference,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",-0.39441104938908805,-0.39441104938908805,0.0,0.0,4.044110493890881e-11,0.0,True,336
+decisions,absolute_regret,"[""primary"", ""224"", ""79"", ""primary_494f26df6416"", ""uniform_random_expected""]",0.0312652327829959,0.03126523278299592,2.0816681711721685e-17,6.658092666766632e-16,4.126523278299592e-12,5.0446054239392476e-06,True,13824
+decisions,all_minima_hit,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",1.0,1.0,0.0,0.0,1.01e-10,0.0,True,13824
+decisions,candidate_count,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",3,3,0,,0,0,True,13824
+decisions,normalized_regret,"[""primary"", ""462"", ""82"", ""primary_52112c337d08"", ""uniform_random_expected""]",0.38585378729928593,0.38585378729928516,7.771561172376096e-16,2.0141207442258734e-15,3.958537872992852e-11,1.963240322998453e-05,True,13824
+decisions,oracle,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",mlp_up_gate_all_blocks_stage15_w8,mlp_up_gate_all_blocks_stage15_w8,0,,0,0,True,13824
+decisions,oracle_Y,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",0.0028899545882836723,0.0028899545882836723,0.0,0.0,1.2889954588283673e-12,0.0,True,13824
+decisions,oracle_hit,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",1.0,1.0,0.0,0.0,1.01e-10,0.0,True,13824
+decisions,oracle_stage,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",15,15,0,,0,0,True,13824
+decisions,range_tau,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",1e-12,1e-12,0.0,0.0,1.0000000001e-12,0.0,True,13824
+decisions,resolved,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",True,True,0,,0,0,True,13824
+decisions,risk_range,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",0.02031685194714328,0.02031685194714328,0.0,0.0,3.031685194714328e-12,0.0,True,13824
+decisions,saving_bits,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",1189085184,1189085184,0,,0,0,True,13824
+decisions,selected,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",mlp_up_gate_all_blocks_stage15_w8,mlp_up_gate_all_blocks_stage15_w8,0,,0,0,True,13824
+decisions,selected_Y,"[""primary"", ""131"", ""79"", ""primary_abefa8b91ecd"", ""uniform_random_expected""]",713.6188637652402,713.61886376524,2.2737367544323206e-13,3.186206068650553e-16,7.136288637652401e-08,3.186161420707758e-06,True,13824
+decisions,selected_probability_json,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",{'mlp_up_gate_all_blocks_stage15_w8': 1.0},{'mlp_up_gate_all_blocks_stage15_w8': 1.0},0,,0,0,True,13824
+decisions,selected_stage,"[""primary"", ""19"", ""79"", ""primary_019d7c31a48b"", ""constant""]",15,15,0,,0,0,True,13824
+exploratory_subset_comparisons,exact_tie,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",0,0,0,,0,0,True,21
+exploratory_subset_comparisons,high,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.06649700538269479,-0.06649700538269479,0.0,0.0,7.64970053826948e-12,0.0,True,21
+exploratory_subset_comparisons,low,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.30994266876126103,-0.30994266876126103,0.0,0.0,3.199426687612611e-11,0.0,True,21
+exploratory_subset_comparisons,lower95,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.2865942651214151,-0.2865942651214151,0.0,0.0,2.965942651214151e-11,0.0,True,21
+exploratory_subset_comparisons,negative_improvement,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",15,15,0,,0,0,True,21
+exploratory_subset_comparisons,nonworse,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",15,15,0,,0,0,True,21
+exploratory_subset_comparisons,point,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.17506370647025069,-0.17506370647025069,0.0,0.0,1.850637064702507e-11,0.0,True,21
+exploratory_subset_comparisons,positive_worsening,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",1,1,0,,0,0,True,21
+exploratory_subset_comparisons,upper95,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.07929924590659954,-0.07929924590659954,0.0,0.0,8.929924590659953e-12,0.0,True,21
+exploratory_subset_results,high,"[""exploratory_oracle_majority_lt_0.75"", ""candidate_B"", ""absolute_regret""]",2.200110767310122,2.200110767310122,0.0,0.0,2.2101107673101223e-10,0.0,True,24
+exploratory_subset_results,low,"[""exploratory_oracle_majority_lt_0.75"", ""uniform_random_expected"", ""normalized_regret""]",0.4325703198137016,0.43257031981370153,5.551115123125783e-17,1.283286177728635e-16,4.425703198137016e-11,1.2542899680806668e-06,True,24
+exploratory_subset_results,lower95,"[""exploratory_oracle_majority_lt_0.75"", ""uniform_random_expected"", ""absolute_regret""]",0.5914859554464108,0.5914859554464109,1.1102230246251565e-16,1.8770065703204066e-16,6.014859554464109e-11,1.8458004124155668e-06,True,24
+exploratory_subset_results,point,"[""exploratory_oracle_majority_lt_0.75"", ""uniform_random_expected"", ""normalized_regret""]",0.44303710606608926,0.4430371060660892,5.551115123125783e-17,1.2529684414961183e-16,4.5303710606608925e-11,1.2253113594443594e-06,True,24
+exploratory_subset_results,upper95,"[""exploratory_oracle_majority_lt_0.75"", ""uniform_random_expected"", ""normalized_regret""]",0.4515289485188175,0.4515289485188174,5.551115123125783e-17,1.2294040374012564e-16,4.6152894851881745e-11,1.2027664008814505e-06,True,24
+historical_summary,high,"[""primary"", ""constant"", ""absolute_regret""]",0.4368094971345909,0.4368094971345909,0.0,0.0,4.468094971345909e-11,0.0,True,12
+historical_summary,low,"[""primary"", ""candidate_B"", ""normalized_regret""]",0.036872847906117195,0.0368728479061172,6.938893903907228e-18,1.8818437679602357e-16,4.68728479061172e-12,1.480365331717269e-06,True,12
+historical_summary,lower95,"[""primary"", ""constant"", ""absolute_regret""]",0.07416036900513634,0.07416036900513634,0.0,0.0,8.416036900513634e-12,0.0,True,12
+historical_summary,point,"[""primary"", ""constant"", ""absolute_regret""]",0.2108042844121087,0.2108042844121087,0.0,0.0,2.208042844121087e-11,0.0,True,12
+historical_summary,upper95,"[""primary"", ""energy"", ""normalized_regret""]",0.19453249541508885,0.19453249541508882,2.7755575615628914e-17,1.4267835076296493e-16,2.0453249541508882e-11,1.3570252276686065e-06,True,12
+leave_one_class_out,change_from_full,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",0.01920571725932199,0.01920571725932199,0.0,0.0,2.9205717259321996e-12,0.0,True,336
+leave_one_class_out,class_index,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",0,0,0,,0,0,True,336
+leave_one_class_out,full_point,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",-0.10632529049925843,-0.10632529049925843,0.0,0.0,1.1632529049925844e-11,0.0,True,336
+leave_one_class_out,leave_one_class_out_point,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret"", ""19""]",-0.08711957323993644,-0.08711957323993644,0.0,0.0,9.711957323993644e-12,0.0,True,336
+manifest,draws,"""bootstrap""",10000,10000,0,,0,0,True,1
+manifest,indices_sha256,"""bootstrap""",2f110408df13144fbe6302ff3d52705bcb1965734593261b54c7e78c3e760a77,2f110408df13144fbe6302ff3d52705bcb1965734593261b54c7e78c3e760a77,0,,0,0,True,1
+manifest,seed,"""bootstrap""",2026091101,2026091101,0,,0,0,True,1
+oracle_frequency,count,"[""primary"", ""primary_019d7c31a48b"", ""oracle"", ""mlp_up_gate_all_blocks_stage4_w8""]",0,0,0,,0,0,True,81
+oracle_frequency,frequency,"[""primary"", ""primary_019d7c31a48b"", ""oracle"", ""mlp_up_gate_all_blocks_stage4_w8""]",0.0,0.0,0.0,0.0,1e-12,0.0,True,81
+oracle_frequency,stage,"[""primary"", ""primary_019d7c31a48b"", ""oracle"", ""mlp_up_gate_all_blocks_stage4_w8""]",4,4,0,,0,0,True,81
+oracle_frequency,total,"[""primary"", ""primary_019d7c31a48b"", ""oracle"", ""mlp_up_gate_all_blocks_stage4_w8""]",64,64,0,,0,0,True,81
+oracle_headroom,H_abs,"[""primary"", ""primary_abefa8b91ecd""]",-1.4210854715202004e-14,0.0,1.4210854715202004e-14,0.014210854715202004,1e-12,0.014210854715202004,True,27
+oracle_headroom,H_normalized,"[""primary"", ""primary_494f26df6416""]",0.25395994201463906,0.253959942014639,5.551115123125783e-17,2.1858231180434742e-16,2.63959942014639e-11,2.1030142228239777e-06,True,27
+oracle_headroom,empirical_best_fixed_abs_candidate,"[""primary"", ""primary_019d7c31a48b""]",mlp_up_gate_all_blocks_stage15_w8,mlp_up_gate_all_blocks_stage15_w8,0,,0,0,True,27
+oracle_headroom,empirical_best_fixed_nr_candidate,"[""primary"", ""primary_019d7c31a48b""]",mlp_up_gate_all_blocks_stage15_w8,mlp_up_gate_all_blocks_stage15_w8,0,,0,0,True,27
+oracle_headroom,fully_fixed,"[""primary"", ""primary_019d7c31a48b""]",False,False,0,,0,0,True,27
+oracle_headroom,majority_candidate,"[""primary"", ""primary_019d7c31a48b""]",mlp_up_gate_all_blocks_stage15_w8,mlp_up_gate_all_blocks_stage15_w8,0,,0,0,True,27
+oracle_headroom,majority_rate,"[""primary"", ""primary_019d7c31a48b""]",0.984375,0.984375,0.0,0.0,9.94375e-11,0.0,True,27
+oracle_headroom,majority_stage,"[""primary"", ""primary_019d7c31a48b""]",15,15,0,,0,0,True,27
+oracle_headroom,oracle_entropy_bits,"[""primary"", ""primary_019d7c31a48b""]",0.11611507530476972,0.11611507530476972,0.0,0.0,1.2611507530476972e-11,0.0,True,27
+oracle_headroom,oracle_tie_units,"[""primary"", ""primary_019d7c31a48b""]",0,0,0,,0,0,True,27
+paired_comparisons,exact_tie,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",0,0,0,,0,0,True,21
+paired_comparisons,high,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.057550379927504586,-0.057550379927504586,0.0,0.0,6.7550379927504586e-12,0.0,True,21
+paired_comparisons,low,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.16786024448240766,-0.16786024448240766,0.0,0.0,1.7786024448240766e-11,0.0,True,21
+paired_comparisons,lower95,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.15720188504818616,-0.15720188504818616,0.0,0.0,1.6720188504818615e-11,0.0,True,21
+paired_comparisons,negative_improvement,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",16,16,0,,0,0,True,21
+paired_comparisons,nonworse,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",16,16,0,,0,0,True,21
+paired_comparisons,point,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.10632529049925843,-0.10632529049925843,0.0,0.0,1.1632529049925844e-11,0.0,True,21
+paired_comparisons,positive_worsening,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",0,0,0,,0,0,True,21
+paired_comparisons,upper95,"[""primary"", ""candidate_B"", ""energy"", ""absolute_regret""]",-0.0625477399549141,-0.0625477399549141,0.0,0.0,7.25477399549141e-12,0.0,True,21
+policy_equivalence,different_selection,"[""primary"", ""latest_stage"", ""stage_position_only""]",0,0,0,,0,0,True,4
+policy_equivalence,exact_selection_alias,"[""primary"", ""latest_stage"", ""stage_position_only""]",True,True,0,,0,0,True,4
+policy_equivalence,latest_stage15_sets,"[""primary"", ""latest_stage"", ""stage_position_only""]",27,27,0,,0,0,True,4
+policy_equivalence,pure_G_argmin_stage15_sets,"[""primary"", ""latest_stage"", ""stage_position_only""]",27,27,0,,0,0,True,4
+policy_equivalence,same_selection,"[""primary"", ""latest_stage"", ""stage_position_only""]",1728,1728,0,,0,0,True,4
+policy_equivalence,units,"[""primary"", ""latest_stage"", ""stage_position_only""]",1728,1728,0,,0,0,True,4
+policy_selection_frequency,count,"[""primary"", ""primary_019d7c31a48b"", ""constant"", ""mlp_up_gate_all_blocks_stage4_w8""]",0.0,0.0,0.0,0.0,1e-12,0.0,True,648
+policy_selection_frequency,frequency,"[""primary"", ""primary_019d7c31a48b"", ""constant"", ""mlp_up_gate_all_blocks_stage4_w8""]",0.0,0.0,0.0,0.0,1e-12,0.0,True,648
+policy_selection_frequency,stage,"[""primary"", ""primary_019d7c31a48b"", ""constant"", ""mlp_up_gate_all_blocks_stage4_w8""]",4,4,0,,0,0,True,648
+policy_selection_frequency,total,"[""primary"", ""primary_019d7c31a48b"", ""constant"", ""mlp_up_gate_all_blocks_stage4_w8""]",64,64,0,,0,0,True,648
+policy_tails,Q90,"[""primary"", ""ALL"", ""uniform_random_expected"", ""normalized_regret""]",0.5472620979262802,0.5472620979262801,1.1102230246251565e-16,2.0286861246778885e-16,5.572620979262802e-11,1.9922816009855873e-06,True,448
+policy_tails,Q95,"[""primary"", ""primary_9688e435275c"", ""uniform_random_expected"", ""normalized_regret""]",0.6100546980068269,0.6100546980068272,3.3306690738754696e-16,5.459623677610291e-16,6.200546980068272e-11,5.371572999256263e-06,True,448
+policy_tails,Q99,"[""primary"", ""primary_abefa8b91ecd"", ""uniform_random_expected"", ""normalized_regret""]",0.5032576340854318,0.5032576340854317,1.1102230246251565e-16,2.206072892749577e-16,5.132576340854317e-11,2.1630911084322227e-06,True,448
+policy_tails,max,"[""primary"", ""primary_019d7c31a48b"", ""uniform_random_expected"", ""normalized_regret""]",0.66203726511737,0.6620372651173698,2.220446049250313e-16,3.353959310518055e-16,6.720372651173698e-11,3.3040519692944663e-06,True,448
+policy_tails,mean,"[""primary"", ""primary_abefa8b91ecd"", ""uniform_random_expected"", ""absolute_regret""]",666.8982699569409,666.898269956941,1.1368683772161603e-13,1.7047103410383168e-16,6.66908269956941e-08,1.7046847796467756e-06,True,448
+policy_tails,median,"[""primary"", ""primary_ec9365fcc9ef"", ""uniform_random_expected"", ""normalized_regret""]",0.37394937140488826,0.3739493714048884,1.1102230246251565e-16,2.96891266444483e-16,3.839493714048884e-11,2.8915870354541783e-06,True,448
+policy_tails,units,"[""primary"", ""ALL"", ""constant"", ""absolute_regret""]",1728,1728,0,,0,0,True,448
+policy_tails,valid_units,"[""primary"", ""ALL"", ""constant"", ""absolute_regret""]",1728,1728,0,,0,0,True,448
+secondary_results,analysis_status,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",source_summary_only,source_summary_only,0,,0,0,True,20
+secondary_results,high,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",0.003278898804148255,0.003278898804148255,0,,0,0,True,20
+secondary_results,low,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",0.00157245794835463,0.00157245794835463,0,,0,0,True,20
+secondary_results,lower95,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",0.0016953983989225151,0.0016953983989225151,0,,0,0,True,20
+secondary_results,point,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",0.002373973169184769,0.002373973169184769,0,,0,0,True,20
+secondary_results,source_path,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",evidence/e1pred2r2/matched_cost_regret_summary.csv,evidence/e1pred2r2/matched_cost_regret_summary.csv,0,,0,0,True,20
+secondary_results,source_sha256,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5,4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5,0,,0,0,True,20
+secondary_results,upper95,"[""secondary"", ""summary"", ""constant"", """", """", ""absolute_regret""]",0.0031230961891513353,0.0031230961891513353,0,,0,0,True,20

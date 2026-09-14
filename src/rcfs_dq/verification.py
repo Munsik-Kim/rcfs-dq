@@ -6,6 +6,14 @@ from pathlib import Path, PurePosixPath
 import numpy as np
 
 
+class VerificationError(AssertionError):
+    """Explicit verification failure, including when Python optimization is enabled.
+
+    The AssertionError base preserves the public helper's existing exception
+    compatibility. Raising this class is never removed by ``python -O``.
+    """
+
+
 def file_sha256(path):
     h = hashlib.sha256()
     with Path(path).open("rb") as stream:
@@ -24,11 +32,11 @@ def tensor_checksum(tensor):
 def assert_close(actual, expected, atol=1e-12, rtol=1e-10):
     a, b = np.asarray(actual, dtype=np.float64), np.asarray(expected, dtype=np.float64)
     if a.shape != b.shape or not np.isfinite(a).all() or not np.isfinite(b).all():
-        raise AssertionError("Shape mismatch or nonfinite comparison")
+        raise VerificationError("Shape mismatch or nonfinite comparison")
     error = np.abs(a - b)
     tolerance = atol + rtol * np.abs(b)
     if not (error <= tolerance).all():
-        raise AssertionError(f"Numerical mismatch: max absolute difference {error.max()}")
+        raise VerificationError(f"Numerical mismatch: max absolute difference {error.max()}")
     return float(error.max(initial=0))
 
 
@@ -44,7 +52,7 @@ def verify_inventory(root, manifest):
         if path.is_symlink() or not path.resolve().is_relative_to(root):
             raise ValueError("Inventory path escapes root")
         if path.stat().st_size != row["bytes"] or file_sha256(path) != row["sha256"]:
-            raise AssertionError(f"Inventory mismatch: {relative}")
+            raise VerificationError(f"Inventory mismatch: {relative}")
     return len(seen)
 
 

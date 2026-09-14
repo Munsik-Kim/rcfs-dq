@@ -1,0 +1,39 @@
+{
+  "audit_output_inventory_files": 13,
+  "audit_source_inventory_files": 12,
+  "bootstrap_indices_sha256": "2f110408df13144fbe6302ff3d52705bcb1965734593261b54c7e78c3e760a77",
+  "checked_scalar_fields": 228542,
+  "decision_rows": 13824,
+  "failures": [],
+  "implementation_inventory": [
+    {
+      "bytes": 43192,
+      "path": "src/rcfs_dq/baseline_independent.py",
+      "sha256": "52b25428a30973456b0b01938f2d8ae0f586c7a594c6fd32feb3da9bf1ff1910"
+    },
+    {
+      "bytes": 17727,
+      "path": "src/rcfs_dq/pairing_independent.py",
+      "sha256": "15adb729de885d58e24cde04f2700cf0fc255025dcc7b87a9dcab536447dab5a"
+    },
+    {
+      "bytes": 4379,
+      "path": "scripts/verify_baseline_audit.py",
+      "sha256": "26ae096e8a63cf466b7c7c9017d24ff13960cb2567f803431da3e8e096f16782"
+    }
+  ],
+  "imports_main_analysis": false,
+  "manifest_semantic_checks": 14,
+  "model_calls": 0,
+  "original_receiver_tensors_independently_recomputed": false,
+  "predictor_score_rows": 25920,
+  "scope": "Independent public-scalar P1 recomputation; historical certificate readback only",
+  "shared_code": "Independent P0 reader, reference and comparison utilities only",
+  "source_alignment_independently_reexecuted": false,
+  "source_certificate_sha256": "f18b68a489ec71bc4194cfbac5d361aba26c8b2f1d2fe871706e51122068d6d8",
+  "status": "PASS",
+  "tolerance": {
+    "atol": 1e-12,
+    "rtol": 1e-10
+  }
+}

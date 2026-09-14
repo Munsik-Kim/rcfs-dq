@@ -1,0 +1,1053 @@
+{
+  "analysis_implementation": [
+    {
+      "bytes": 42230,
+      "path": "src/rcfs_dq/baseline_audit.py",
+      "sha256": "b5735842a85fb530e85c0172e4b97a6646173de37950c25518e133e5334d3def"
+    },
+    {
+      "bytes": 43192,
+      "path": "src/rcfs_dq/baseline_independent.py",
+      "sha256": "52b25428a30973456b0b01938f2d8ae0f586c7a594c6fd32feb3da9bf1ff1910"
+    },
+    {
+      "bytes": 25948,
+      "path": "src/rcfs_dq/pairing_audit.py",
+      "sha256": "4bbd3fc700c79db4c11d4199e7e52159342b5f5d497f590cb5b3df52e4a5b434"
+    },
+    {
+      "bytes": 17727,
+      "path": "src/rcfs_dq/pairing_independent.py",
+      "sha256": "15adb729de885d58e24cde04f2700cf0fc255025dcc7b87a9dcab536447dab5a"
+    },
+    {
+      "bytes": 8258,
+      "path": "src/rcfs_dq/public_audits.py",
+      "sha256": "f967fad2bd2cc6ae80e1707e2e3331bde5e607c8daf0e0e3fa4974492b8784b7"
+    },
+    {
+      "bytes": 3803,
+      "path": "src/rcfs_dq/decisions.py",
+      "sha256": "92048a39019cb3a5fb5e681749d01200078b4856a79c0bc3780cdccf31803696"
+    },
+    {
+      "bytes": 963,
+      "path": "src/rcfs_dq/scoring.py",
+      "sha256": "ec595c6c1b5fc51ebf6979091b92a8a44cce809793c1e294f7920ab25b8fd639"
+    },
+    {
+      "bytes": 2929,
+      "path": "src/rcfs_dq/verification.py",
+      "sha256": "a1cf3881c328fcb166ae094422a925b2c139ad972ee78138f2a1dcf586e4fa61"
+    },
+    {
+      "bytes": 846,
+      "path": "scripts/audit_baselines.py",
+      "sha256": "c4c6a37a36b0ddfc86d6322f2f8b2e8a10308cb58154ed2c19ccbc17119a4bac"
+    },
+    {
+      "bytes": 761,
+      "path": "scripts/audit_pairing_ablation.py",
+      "sha256": "74a046ed3c42ee913d4615fdb051776e1e132302dcb46b263d3d75adba2504e5"
+    },
+    {
+      "bytes": 4379,
+      "path": "scripts/verify_baseline_audit.py",
+      "sha256": "26ae096e8a63cf466b7c7c9017d24ff13960cb2567f803431da3e8e096f16782"
+    },
+    {
+      "bytes": 833,
+      "path": "scripts/verify_public_audits.py",
+      "sha256": "3b1605fca13fff6de1d54b585c50f8a0cd4deb408ca8ad2dede44b47a4fe1e53"
+    },
+    {
+      "bytes": 1050,
+      "path": "scripts/build_public_audit_manifest.py",
+      "sha256": "9f55cdae2ca41a03fbc09a2b346c259a5b2d50138fd37743f033cd661a4f1b0b"
+    }
+  ],
+  "artifacts": [
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 16931,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/audit_manifest.json",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "514524dbb936265137675173630d0e397b3d0afc15a568a612aa4d80f04675a8",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 7947,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/baseline_results.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "357f3f45e7b05063f7346abb8d15001a51f001a5d029e96e70480136eeb0c218",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 64422,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/class_differences.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "a4a7a47c7076bdd3d2adfcca043701ff34451e9f74a48231474e2b6b3f9745d1",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 76867,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/class_policy_means.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "7e8917f8c6a6be9fe24ec581bf8202293d942534939f69b823df8b78ad41ad28",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 33959,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/decision_changes.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "e3c0ff3be9e4fbca3463784388964992e2049848f67bb7898e74e28b7db2e13d",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 6017998,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/decisions.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "a9b6b82a6f7fb20e97bd481b3ec86950380a991d6ef7b3a0b3006e44edebe15b",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 7625,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/exploratory_subset_comparisons.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "c3bdcefd80f875917720d1a35e34c114d2bf047782752e7b3b1bca0fa0c8783a",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 8270,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/exploratory_subset_results.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "ca1046332d937913877f6347e2095e9a1dcae4732e1ba6aeadd0270e2ce1f2a6",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 1273,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/independent_verification.json",
+      "role": "independent_verification",
+      "sha256": "1dc915df5020dbcbe1abc9f33fc00754118912b41b790ba5d19306d8a36357a8",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 85766,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/largest_policy_differences.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "bb09bb9a49104a57cb5e28d71eec82319a9aac1a200e56533a287b1aac497a4f",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 77069,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/leave_one_class_out.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "92715ee0e62935364c79ad4c9569af6f662503b878f9aaaa2a2872440de31858",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 16824,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/main_vs_independent.csv",
+      "role": "independent_verification",
+      "sha256": "213564548c838ead3ba4e207cf99798898f421e3b7607b5384fb18f4398eebf5",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 15346,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/oracle_frequency.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "b52fe0545ddb7bb72c65c4f6e54f6caab8b25e32a3327ed1c8677169cc61f27f",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 12908,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/oracle_headroom.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "1f26f42f15543719fefd7370288e3ed83b012e8fe134420813c8c8fe42effbc9",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 7178,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/paired_comparisons.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "30543e457028931e72b6e588405c084a8e6e9ebcace6bde37d1690b31e3ab4a1",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 820,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/policy_equivalence.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "4b63239cb8083a2138b5c5fa2bc95a2dfaf1f1c1afd46f4ccaf79ebf35b4bbaa",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 117234,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/policy_selection_frequency.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "14841acb57958da99582c93d54700f2da0d04f02d7591d183a6a36970c828145",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 112668,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/policy_tails.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "1b8f7850767e79f30137e83c2c88a75085aa828e79196e53112c5141056c2541",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 3198094,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/policy_unit_differences.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "05d49cd61031c8ef724e0424b7edcbe18a1d3c40ec837738ce17c969e78460d8",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 9159,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/secondary_results.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "2a5e42319a0d6e8d5016f783b3148f0b4d3b4a9af552a4e98cdbf180c7d50ef3",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 2574,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/selection_costs.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "ba508d1b12756844b1bb5f4ef8aa3b8fe663e1fb89145543c98a8041e07556a4",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 22481,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/source_reproduction.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "46a3b51cd740791d3fdc52ede068c4652e88cd941f5c911444ec18a54e6e0f5a",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_baselines.py",
+      "audit": "P0",
+      "bytes": 72411,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/baseline_audit/worst_regret_units.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "524067c86130612a7eb7483fb11e44985f3db487c04b19e4ebd23cb0895d224e",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 13637,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/audit_manifest.json",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "ebf268d3cb8dfecef6c3176f25bfb2fca09888660b2191674b2a00c1aff388f1",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 20613,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/class_endpoints.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "42fee8ab564d974814f040d179b887cc2ede8e8bab273bfd5651745ac5fb05db",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 389356,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/decision_changes.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "fdff656e5d757c2d1b20c5af145d5867d3ba80f4b6366c91213ce5b793a6d785",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 2971885,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/decisions.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "1129e537c0b432a0ae48d1ea5bfd90fa7b8b7583b3e9ec25299b9889dd4d1f89",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 1394,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/independent_verification.json",
+      "role": "independent_verification",
+      "sha256": "452584dc68a7286e871e99ca8f712f48fd35b46c523608819d3a4c639e7f0b40",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 96841,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/largest_policy_changes.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "0555b9688ae820ae0d2da6869063ced5f33ff1e2b37c6a57cdafc9a711bd0bac",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 82237,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/leave_one_class_out.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "ef73ff42f48109e6967547ed7dc98066e0a1b3dd87ac7d42079a94da3f96294d",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 7826,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/main_vs_independent.csv",
+      "role": "independent_verification",
+      "sha256": "f26b4505235bb1216fe13313e60cc3a47ab9eccce9483bbd2d2d9459b8ed5e5b",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 260,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/missing_data_requirements.json",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "0bc736beeb16ef4c383114f924b6776455cd7a3bd527464c34d01a377c628b49",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 5586,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/paired_comparisons.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "0484a61c2c5581b780dcaed45e9fb1513b973c7dc6c5e1428b818bd13e6db33f",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 3686368,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/predictor_scores.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "04b4068b804bd34a0978e2ee703175a9f71d2b8a602514fe491649a4a41ff1cb",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 6193,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/score_results.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "09eb4ae8a2b72af669780b5bbeb6a42f6bf8b467dc6a6208fe0b476e01d4fe98",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 27293,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/source_alignment.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "a88d60eadfb545f3d474ec04435f81db845d8678ec6d8720c8497ccda1e367f9",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 53587,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/source_alignment_certificate.json",
+      "role": "historical_provenance_receipt_readback_only",
+      "sha256": "f18b68a489ec71bc4194cfbac5d361aba26c8b2f1d2fe871706e51122068d6d8",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 249,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/stage_coefficients.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "ad9b175b1f2238e0303fedf97fd543525c860392847cb1db8acd6bab428ba49d",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    },
+    {
+      "analysis_script": "scripts/audit_pairing_ablation.py",
+      "audit": "P1",
+      "bytes": 965,
+      "derived": true,
+      "model_calls": 0,
+      "path": "analysis/pairing_ablation/stage_observables.csv",
+      "role": "retrospective_scalar_derivation",
+      "sha256": "18fb45f1b0bfd8cada22ca89b7a4d75d7cef4d9fbfd50c60866ad9d5a4d02b96",
+      "source_inputs": [
+        "configs/candidates.csv",
+        "configs/cost_sets.csv",
+        "configs/frozen_predictor.json",
+        "evidence/e1c/directional_replication.csv",
+        "evidence/e1c/global_tests.csv",
+        "evidence/e1d1/directional_contrasts.csv",
+        "evidence/e1d1/group_stage_bit_summary.csv",
+        "evidence/e1pred2r2/candidate_observations.csv",
+        "evidence/e1pred2r2/decision_diversity.csv",
+        "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+        "evidence/e1pred2r2/predictor_pairwise_comparison.csv"
+      ]
+    }
+  ],
+  "derived": true,
+  "gpu_calls": 0,
+  "historical_alignment_receipt": {
+    "bytes": 53587,
+    "path": "analysis/pairing_ablation/source_alignment_certificate.json",
+    "sha256": "f18b68a489ec71bc4194cfbac5d361aba26c8b2f1d2fe871706e51122068d6d8"
+  },
+  "limitations": [
+    "Existing published scalars only; no raw model outputs are reproduced",
+    "Historical alignment receipt is read back, not a new receiver/probe audit",
+    "Stage-only rule and descriptive headroom subset are retrospective",
+    "Secondary family is historical summary readback, not new decision recomputation",
+    "Zero calls describes this scalar pipeline, not unrelated external processes"
+  ],
+  "model_calls": 0,
+  "new_model_observations": 0,
+  "new_prospective_confirmation": 0,
+  "original_evidence_files_checked": 22,
+  "original_evidence_manifest": {
+    "bytes": 9462,
+    "path": "PUBLIC_EVIDENCE_MANIFEST.json",
+    "sha256": "8a5ffc01d6f673fcd46c4c9f404baadc4a76fa15e014c149740c00ce44e946ba"
+  },
+  "predictor_refits": 0,
+  "schema_version": 1,
+  "scope": "retrospective public scalar audit",
+  "source_inputs": [
+    {
+      "bytes": 156951,
+      "path": "configs/candidates.csv",
+      "sha256": "021348083e5e032be3426b3ba84a29becb80345867614d3bc372d39ef48559ee"
+    },
+    {
+      "bytes": 7061,
+      "path": "configs/cost_sets.csv",
+      "sha256": "427df7925930f0f8db8258473194003b1178304f83813582d61a36532294219f"
+    },
+    {
+      "bytes": 7321,
+      "path": "configs/frozen_predictor.json",
+      "sha256": "7c7d42eb59eb088a5e96bc4336f5614aba2097e14c04ec9e17e11d81d580cd7e"
+    },
+    {
+      "bytes": 2759,
+      "path": "evidence/e1c/directional_replication.csv",
+      "sha256": "ca24566c8c42c85b6417c3d1ae62f0d81fbd72cf3495f8ca396a3aa2c72aa2e6"
+    },
+    {
+      "bytes": 911,
+      "path": "evidence/e1c/global_tests.csv",
+      "sha256": "b314f85cc881b2b91b2a02a89e8621c30e53d332617cb3813265d1046b05b7d0"
+    },
+    {
+      "bytes": 54306,
+      "path": "evidence/e1d1/directional_contrasts.csv",
+      "sha256": "dde2705f2bb7bdb670a0b43d6c15d9e011e7b7ace9a0dccb6598ce9abb5712c4"
+    },
+    {
+      "bytes": 9892,
+      "path": "evidence/e1d1/group_stage_bit_summary.csv",
+      "sha256": "945c2e98278e4e0b4432551744be1f33dd85511f6b81b6ed88a11c4814955ea3"
+    },
+    {
+      "bytes": 541307,
+      "path": "evidence/e1pred2r2/candidate_observations.csv",
+      "sha256": "9ed386af3e565cf6ed8b4cf6119bb9126795d5b67de8900f021e06860f45d4dd"
+    },
+    {
+      "bytes": 22020,
+      "path": "evidence/e1pred2r2/decision_diversity.csv",
+      "sha256": "c9d8551e4c494700887966a42e556372f3733280644bb574434866b414b2ea93"
+    },
+    {
+      "bytes": 3158,
+      "path": "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+      "sha256": "4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5"
+    },
+    {
+      "bytes": 2623,
+      "path": "evidence/e1pred2r2/predictor_pairwise_comparison.csv",
+      "sha256": "1cdaaa9bbe6b48e3884e63d6584f9d5345f021a075453c0c02796b65b6ee527c"
+    }
+  ],
+  "source_public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+  "verification": "scripts/verify_public_audits.py"
+}
