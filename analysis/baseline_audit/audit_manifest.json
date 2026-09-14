@@ -1,0 +1,538 @@
+{
+  "aggregation": "equal cost sets per class/seed; equal four seeds; equal 16 classes",
+  "beta": 0.6735229330314306,
+  "bootstrap": {
+    "byte_contract": "row-major little-endian int64 without header",
+    "draws": 10000,
+    "dtype": "int64",
+    "generator": "PCG64",
+    "index_matrix_sha256": "2f110408df13144fbe6302ff3d52705bcb1965734593261b54c7e78c3e760a77",
+    "one_sided": [
+      0.05,
+      0.95
+    ],
+    "quantile_method": "linear",
+    "seed": 2026091101,
+    "shape": [
+      10000,
+      16
+    ],
+    "shared_paired_indices": true,
+    "two_sided": [
+      0.025,
+      0.975
+    ]
+  },
+  "candidates": 81,
+  "classes": [
+    19,
+    85,
+    131,
+    224,
+    301,
+    345,
+    384,
+    462,
+    511,
+    568,
+    679,
+    712,
+    780,
+    870,
+    888,
+    975
+  ],
+  "decision_units_per_policy": 1728,
+  "exploratory_subset": {
+    "bits": [
+      4,
+      6
+    ],
+    "groups": [
+      "adaln_conditioning_all_blocks",
+      "attention_output_all_blocks",
+      "mlp_up_gate_all_blocks"
+    ],
+    "prospective": false,
+    "selection": "test oracle majority < 0.75",
+    "set_count": 5,
+    "sets": [
+      "primary_494f26df6416",
+      "primary_52112c337d08",
+      "primary_d0adb13a6bdf",
+      "primary_d82bcfdaeedc",
+      "primary_da06c09aa41a"
+    ],
+    "units": 320
+  },
+  "fitted_parameters": 0,
+  "gpu_calls": 0,
+  "headroom_aggregation": "equal class/seed within each cost set; test-best fixed diagnostic only",
+  "implementation": [
+    {
+      "bytes": 42230,
+      "path": "src/rcfs_dq/baseline_audit.py",
+      "sha256": "b5735842a85fb530e85c0172e4b97a6646173de37950c25518e133e5334d3def"
+    },
+    {
+      "bytes": 846,
+      "path": "scripts/audit_baselines.py",
+      "sha256": "c4c6a37a36b0ddfc86d6322f2f8b2e8a10308cb58154ed2c19ccbc17119a4bac"
+    }
+  ],
+  "independent_verification": "separate verifier required; not asserted by this main runner",
+  "inputs": [
+    {
+      "bytes": 156951,
+      "column_projection": {
+        "bits": "bits",
+        "cell_id": "cell_id",
+        "group": "group",
+        "numel": "numel",
+        "packed_bits": "packed_bits",
+        "regime": "regime",
+        "saving_bits": "saving_bits",
+        "shapes": "shapes",
+        "stage": "stage"
+      },
+      "path": "configs/candidates.csv",
+      "public_blob": "a4a49640f077f9b4318bf1a4a8a31317c003c7e8",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "exact string column projection; no scalar recomputation",
+      "rows": 81,
+      "schema": [
+        "cell_id",
+        "group",
+        "stage",
+        "bits",
+        "numel",
+        "packed_bits",
+        "saving_bits",
+        "regime",
+        "shapes"
+      ],
+      "sha256": "021348083e5e032be3426b3ba84a29becb80345867614d3bc372d39ef48559ee",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "021348083e5e032be3426b3ba84a29becb80345867614d3bc372d39ef48559ee"
+    },
+    {
+      "bytes": 7061,
+      "column_projection": {
+        "candidate_count": "candidate_count",
+        "cell_id": "cell_id",
+        "family": "family",
+        "packed_bits": "packed_bits",
+        "saving_bits": "saving_bits",
+        "set_id": "set_id"
+      },
+      "path": "configs/cost_sets.csv",
+      "public_blob": "eedd6b6eb0544c66d0c512a84574b9f193b292ed",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "exact string column projection; no scalar recomputation",
+      "rows": 81,
+      "schema": [
+        "family",
+        "set_id",
+        "cell_id",
+        "candidate_count",
+        "saving_bits",
+        "packed_bits"
+      ],
+      "sha256": "427df7925930f0f8db8258473194003b1178304f83813582d61a36532294219f",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "bf61f56699b90aa0bd493156f3d77d530f7f2ab6431c305ea6293f36a8feb105"
+    },
+    {
+      "bytes": 7321,
+      "path": "configs/frozen_predictor.json",
+      "public_blob": "1a698cc8b1330a535c6d20ce8d9c4bf2e8fa9089",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "whitelisted unchanged source values",
+      "sha256": "7c7d42eb59eb088a5e96bc4336f5614aba2097e14c04ec9e17e11d81d580cd7e",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "40d69928ff78601f15927b2495acd9664b6aebcd2e5e482f01e018635f8d10be"
+    },
+    {
+      "bytes": 541307,
+      "column_projection": {
+        "cell_id": "cell_id",
+        "class_id": "class_id",
+        "energy": "energy_score",
+        "native_Y": "natural_severity_fp16",
+        "seed": "target_seed",
+        "source_B_score": "candidate_B_score"
+      },
+      "path": "evidence/e1pred2r2/candidate_observations.csv",
+      "public_blob": "c0689c5caaf0d26f05b2475808d942d81d33e9f2",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "exact string column projection; no scalar recomputation",
+      "rows": 5184,
+      "schema": [
+        "class_id",
+        "seed",
+        "cell_id",
+        "energy",
+        "native_Y",
+        "source_B_score"
+      ],
+      "sha256": "9ed386af3e565cf6ed8b4cf6119bb9126795d5b67de8900f021e06860f45d4dd",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "ee6296f6189e18fa2ae93da0f55ef4175ac89e493071c75458542dd0636db394"
+    },
+    {
+      "bytes": 3158,
+      "path": "evidence/e1pred2r2/matched_cost_regret_summary.csv",
+      "public_blob": "c76d3bda40c20096745a4387dcf530b4922a24ae",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 24,
+      "schema": [
+        "family",
+        "predictor",
+        "metric",
+        "point",
+        "low",
+        "high",
+        "lower95",
+        "upper95"
+      ],
+      "sha256": "4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "4e3b4c98a1299d139e85cf26fa426edb9dfe793c23a5d38a096072890012c1c5"
+    },
+    {
+      "bytes": 2623,
+      "path": "evidence/e1pred2r2/predictor_pairwise_comparison.csv",
+      "public_blob": "fff8f1fe90f27fc9e3656bc2b76e8fc0972a5d58",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 16,
+      "schema": [
+        "family",
+        "left",
+        "right",
+        "metric",
+        "positive_worsening",
+        "nonworse",
+        "negative_improvement",
+        "point",
+        "low",
+        "high",
+        "lower95",
+        "upper95"
+      ],
+      "sha256": "1cdaaa9bbe6b48e3884e63d6584f9d5345f021a075453c0c02796b65b6ee527c",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "1cdaaa9bbe6b48e3884e63d6584f9d5345f021a075453c0c02796b65b6ee527c"
+    },
+    {
+      "bytes": 22020,
+      "path": "evidence/e1pred2r2/decision_diversity.csv",
+      "public_blob": "81bc948cc9e2b2f1ce647ff1ae5b53b78a28f132",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 206,
+      "schema": [
+        "family",
+        "set_id",
+        "predictor",
+        "cell_id",
+        "count",
+        "total",
+        "frequency",
+        "entropy_bits",
+        "majority_rate",
+        "distinct_candidates"
+      ],
+      "sha256": "c9d8551e4c494700887966a42e556372f3733280644bb574434866b414b2ea93",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "c9d8551e4c494700887966a42e556372f3733280644bb574434866b414b2ea93"
+    },
+    {
+      "bytes": 54306,
+      "path": "evidence/e1d1/directional_contrasts.csv",
+      "public_blob": "5450388f2b31b92f35485294c6da1919eb975c28",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 162,
+      "schema": [
+        "cell_id",
+        "cell_index",
+        "group_name",
+        "stage_index",
+        "weight_bits",
+        "fixed_alpha",
+        "scale_source",
+        "high_curvature_source",
+        "alpha_role",
+        "common_valid_pair_count",
+        "represented_class_count",
+        "cell_tangent_status",
+        "LCG_actual",
+        "LCG_iso0",
+        "LCG_iso1",
+        "LCG_iso",
+        "LCG_shuffled",
+        "isotropic_draw_discrepancy",
+        "L-EDG",
+        "L-EDG-pop",
+        "L-EDG-state",
+        "log_guard_underflow"
+      ],
+      "sha256": "dde2705f2bb7bdb670a0b43d6c15d9e011e7b7ace9a0dccb6598ce9abb5712c4",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "dde2705f2bb7bdb670a0b43d6c15d9e011e7b7ace9a0dccb6598ce9abb5712c4"
+    },
+    {
+      "bytes": 9892,
+      "path": "evidence/e1d1/group_stage_bit_summary.csv",
+      "public_blob": "40ccaf6f8e9c87c0c20e541241cf7d1a3b3fe8a3",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 78,
+      "schema": [
+        "summary_type",
+        "group_name",
+        "stage_index",
+        "weight_bits",
+        "cell_count",
+        "median",
+        "mean",
+        "interquartile_range",
+        "interdecile_range",
+        "positive_cell_count",
+        "negative_cell_count",
+        "tangent_supported_cell_count",
+        "high_curvature_cell_count"
+      ],
+      "sha256": "945c2e98278e4e0b4432551744be1f33dd85511f6b81b6ed88a11c4814955ea3",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "945c2e98278e4e0b4432551744be1f33dd85511f6b81b6ed88a11c4814955ea3"
+    },
+    {
+      "bytes": 911,
+      "path": "evidence/e1c/global_tests.csv",
+      "public_blob": "fbd1151172be3f5a9877cdea865be9ea92f7bae3",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical supplied evidence",
+      "rows": 2,
+      "schema": [
+        "test",
+        "cell_count",
+        "cells",
+        "class_count",
+        "class_effect_mean",
+        "one_sided_positive_p",
+        "bootstrap_95_ci_low",
+        "bootstrap_95_ci_high",
+        "exact_sign_assignments",
+        "applicable"
+      ],
+      "sha256": "b314f85cc881b2b91b2a02a89e8621c30e53d332617cb3813265d1046b05b7d0",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "b314f85cc881b2b91b2a02a89e8621c30e53d332617cb3813265d1046b05b7d0"
+    },
+    {
+      "bytes": 2759,
+      "path": "evidence/e1c/directional_replication.csv",
+      "public_blob": "dd77e817091a45683ea989bd236307b5812e25ab",
+      "public_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+      "role": "byte-identical source table",
+      "rows": 15,
+      "schema": [
+        "cell_id",
+        "locked_discovery_sign",
+        "confirmation_class_mean",
+        "same_sign",
+        "one_sided_exact_p",
+        "bootstrap_95_ci_low",
+        "bootstrap_95_ci_high",
+        "ci_in_locked_direction",
+        "cell_tangent_status",
+        "applicable",
+        "bh15_q",
+        "bh15_reject",
+        "replicated"
+      ],
+      "sha256": "ca24566c8c42c85b6417c3d1ae62f0d81fbd72cf3495f8ca396a3aa2c72aa2e6",
+      "source_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+      "source_file_sha256": "ca24566c8c42c85b6417c3d1ae62f0d81fbd72cf3495f8ca396a3aa2c72aa2e6"
+    }
+  ],
+  "limits": [
+    "No raw tensor reconstruction",
+    "No model replay or new class/seed observations",
+    "No independent leakage or tangent-validity re-audit",
+    "No new scientific PASS gate",
+    "CI including zero is not equivalence",
+    "Oracle entropy is not pairing information"
+  ],
+  "maximum_source_score_abs_error": 0.0,
+  "maximum_source_summary_discrepancy": {
+    "abs_diff": 7.806255641895632e-18,
+    "field": "high",
+    "key": "primary/hybrid/constant/absolute_regret",
+    "main": -0.005404854804544896,
+    "reference": -0.005404854804544888,
+    "scaled_error": 5.0673996872677795e-06,
+    "source_file": "predictor_pairwise_comparison.csv",
+    "source_observations_sha256": "9ed386af3e565cf6ed8b4cf6119bb9126795d5b67de8900f021e06860f45d4dd",
+    "tolerance": 1.5404854804544888e-12
+  },
+  "normalized_range_rule": "span > 1e-12*max(max(native_Y),1); undefined otherwise",
+  "original_public_manifest_sha256": "8a5ffc01d6f673fcd46c4c9f404baadc4a76fa15e014c149740c00ce44e946ba",
+  "outputs": [
+    {
+      "bytes": 7947,
+      "path": "baseline_results.csv",
+      "rows": 24,
+      "sha256": "357f3f45e7b05063f7346abb8d15001a51f001a5d029e96e70480136eeb0c218"
+    },
+    {
+      "bytes": 6017998,
+      "path": "decisions.csv",
+      "rows": 13824,
+      "sha256": "a9b6b82a6f7fb20e97bd481b3ec86950380a991d6ef7b3a0b3006e44edebe15b"
+    },
+    {
+      "bytes": 7178,
+      "path": "paired_comparisons.csv",
+      "rows": 21,
+      "sha256": "30543e457028931e72b6e588405c084a8e6e9ebcace6bde37d1690b31e3ab4a1"
+    },
+    {
+      "bytes": 64422,
+      "path": "class_differences.csv",
+      "rows": 336,
+      "sha256": "a4a7a47c7076bdd3d2adfcca043701ff34451e9f74a48231474e2b6b3f9745d1"
+    },
+    {
+      "bytes": 76867,
+      "path": "class_policy_means.csv",
+      "rows": 384,
+      "sha256": "7e8917f8c6a6be9fe24ec581bf8202293d942534939f69b823df8b78ad41ad28"
+    },
+    {
+      "bytes": 77069,
+      "path": "leave_one_class_out.csv",
+      "rows": 336,
+      "sha256": "92715ee0e62935364c79ad4c9569af6f662503b878f9aaaa2a2872440de31858"
+    },
+    {
+      "bytes": 12908,
+      "path": "oracle_headroom.csv",
+      "rows": 27,
+      "sha256": "1f26f42f15543719fefd7370288e3ed83b012e8fe134420813c8c8fe42effbc9"
+    },
+    {
+      "bytes": 15346,
+      "path": "oracle_frequency.csv",
+      "rows": 81,
+      "sha256": "b52fe0545ddb7bb72c65c4f6e54f6caab8b25e32a3327ed1c8677169cc61f27f"
+    },
+    {
+      "bytes": 8270,
+      "path": "exploratory_subset_results.csv",
+      "rows": 24,
+      "sha256": "ca1046332d937913877f6347e2095e9a1dcae4732e1ba6aeadd0270e2ce1f2a6"
+    },
+    {
+      "bytes": 7625,
+      "path": "exploratory_subset_comparisons.csv",
+      "rows": 21,
+      "sha256": "c3bdcefd80f875917720d1a35e34c114d2bf047782752e7b3b1bca0fa0c8783a"
+    },
+    {
+      "bytes": 9159,
+      "path": "secondary_results.csv",
+      "rows": 20,
+      "sha256": "2a5e42319a0d6e8d5016f783b3148f0b4d3b4a9af552a4e98cdbf180c7d50ef3"
+    },
+    {
+      "bytes": 22481,
+      "path": "source_reproduction.csv",
+      "rows": 100,
+      "sha256": "46a3b51cd740791d3fdc52ede068c4652e88cd941f5c911444ec18a54e6e0f5a"
+    },
+    {
+      "bytes": 112668,
+      "path": "policy_tails.csv",
+      "rows": 448,
+      "sha256": "1b8f7850767e79f30137e83c2c88a75085aa828e79196e53112c5141056c2541"
+    },
+    {
+      "bytes": 117234,
+      "path": "policy_selection_frequency.csv",
+      "rows": 648,
+      "sha256": "14841acb57958da99582c93d54700f2da0d04f02d7591d183a6a36970c828145"
+    },
+    {
+      "bytes": 3198094,
+      "path": "policy_unit_differences.csv",
+      "rows": 12096,
+      "sha256": "05d49cd61031c8ef724e0424b7edcbe18a1d3c40ec837738ce17c969e78460d8"
+    },
+    {
+      "bytes": 33959,
+      "path": "decision_changes.csv",
+      "rows": 196,
+      "sha256": "e3c0ff3be9e4fbca3463784388964992e2049848f67bb7898e74e28b7db2e13d"
+    },
+    {
+      "bytes": 820,
+      "path": "policy_equivalence.csv",
+      "rows": 4,
+      "sha256": "4b63239cb8083a2138b5c5fa2bc95a2dfaf1f1c1afd46f4ccaf79ebf35b4bbaa"
+    },
+    {
+      "bytes": 72411,
+      "path": "worst_regret_units.csv",
+      "rows": 160,
+      "sha256": "524067c86130612a7eb7483fb11e44985f3db487c04b19e4ebd23cb0895d224e"
+    },
+    {
+      "bytes": 85766,
+      "path": "largest_policy_differences.csv",
+      "rows": 280,
+      "sha256": "bb09bb9a49104a57cb5e28d71eec82319a9aac1a200e56533a287b1aac497a4f"
+    },
+    {
+      "bytes": 2574,
+      "path": "selection_costs.csv",
+      "rows": 8,
+      "sha256": "ba508d1b12756844b1bb5f4ef8aa3b8fe663e1fb89145543c98a8041e07556a4"
+    }
+  ],
+  "policies": [
+    "constant",
+    "energy",
+    "candidate_B",
+    "hybrid",
+    "latest_stage",
+    "stage_position_only",
+    "pure_G",
+    "uniform_random_expected"
+  ],
+  "policy_rows": 13824,
+  "primary_sets": 27,
+  "protected_inventory_files_checked": 22,
+  "public_source_commit": "af7b402839d1052ece994c80a91e59e10d7474dc",
+  "schema_version": 1,
+  "scientific_model_calls": 0,
+  "scope": "retrospective_public_scalar_reanalysis",
+  "secondary_status": "source_summary_only",
+  "seeds": [
+    79,
+    80,
+    81,
+    82
+  ],
+  "source_base_commit": "9f4f253d2d8e284368f73f5de6cead1e622b2063",
+  "source_diversity_discrete_checks": 183,
+  "source_score_checks": 5184,
+  "source_summary_numeric_checks": 100,
+  "status": "COMPLETED_PUBLIC_SCALAR_AUDIT",
+  "tie_rule": "lower denoising stage index, source first-seen group order, higher bits, cell ID",
+  "unchanged_historical_decisions": true,
+  "unresolved_decision_rows": 0
+}
