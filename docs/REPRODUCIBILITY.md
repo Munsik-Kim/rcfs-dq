@@ -1,4 +1,4 @@
-# Reproducibility: three distinct scopes
+# Reproducibility: distinct scopes
 
 1. **Core tests:** synthetic algebra, quantization, restoration, controls,
    score freezing, exact-cost decisions, ties, undefined ranges, paired
@@ -10,11 +10,53 @@
    scalar candidate records; frozen scores; 1,728 decisions per policy;
    independent oracle/regret checks; class-block mean/CI reproduction for the
    four primary policies; discovery contrast arithmetic; Tail0 detection counts.
+4. **P0/P1 derived audit:** retrospective CPU-only selections, static/stage
+   baselines, headroom and aligned geometry ablations. Independent NumPy paths
+   recalculate regret and class-block intervals, with a separate audit inventory.
+   Model calls = 0; GPU calls = 0; new model observations = 0;
+   predictor refits = 0; new prospective confirmation = 0.
 
 The public evidence check does not independently regenerate terminal risk from
 raw tensors, rerun discovery/confirmation, or replay the entire internal science
 pipeline. Secondary summary tables are preserved as source records; the compact
 decision recomputation targets the 27 primary sets only.
+
+The original layer remains under
+[PUBLIC_EVIDENCE_MANIFEST.json](../PUBLIC_EVIDENCE_MANIFEST.json): `evidence/`,
+frozen `configs/` and `figures/` retain their original bytes.
+[PUBLIC_AUDIT_MANIFEST.json](../PUBLIC_AUDIT_MANIFEST.json) separately records
+derived `analysis/baseline_audit/` and `analysis/pairing_ablation/` payloads and
+their inputs/implementation. The P1 source-alignment certificate is a historical
+scalar provenance receipt, not a newly reproduced raw-tensor experiment.
+
+## Read-only scalar and audit verification
+
+From the repository with the pinned dependencies:
+
+```bash
+python scripts/verify_evidence.py
+python -O scripts/verify_evidence.py
+python scripts/audit_baselines.py --check
+python scripts/audit_pairing_ablation.py --check
+python scripts/verify_baseline_audit.py --check
+python scripts/verify_baseline_audit.py --pairing --check
+python scripts/verify_public_audits.py
+```
+
+Evidence validation uses explicit failures, not removable Python assertions;
+optimized Python must enforce the same scientific/data checks. Audit `--check`
+modes recompute into memory and compare the committed payloads without replacing
+them. The independent verifier derives results from scalar inputs, not README
+numbers or main summary booleans. Main scripts support `--output` to a new or
+empty directory when a separate scalar export is needed. Original evidence is
+not an output destination.
+
+P0 checks candidate/cost coverage, frozen scores, aliases, regret, aggregation
+and paired bootstrap. P1 checks historical coefficient/support consistency and
+actual/stage/donor/isotropic decisions. The certificate's underlying raw state,
+residual and response tensors are not included. Hash agreement cannot establish
+that the historical model outputs or tangent conditions were independently
+regenerated. See [P0 definitions](BASELINE_AUDIT.md) and [P1 scope](PAIRING_ABLATION.md).
 
 ## Installation contracts
 
@@ -39,6 +81,9 @@ python -m pip install -c requirements/cpu-constraints.txt build setuptools wheel
 python -m pip install --no-build-isolation -c requirements/cpu-constraints.txt -e ".[dev,dit]"
 python -m pip check
 python -m pytest -q
+python scripts/verify_evidence.py
+python -O scripts/verify_evidence.py
+python scripts/verify_public_audits.py
 python -m ruff check .
 python -m ruff format --check .
 HF_HUB_OFFLINE=1 python examples/compact_dit.py
@@ -65,6 +110,8 @@ The wheel supplies reusable Python code. Evidence, examples and configuration
 files are repository payloads; run their checks from the repository after the
 installed import check. GitHub Actions defines both supported Python versions,
 wheel import, tests, scalar verification, offline tiny DiT, lint and hygiene.
+A separate audit check remains model-free; the tiny random DiT makes synthetic
+CPU model calls only and must not be counted as a P0/P1 observation.
 A local equivalent run is not evidence of a completed hosted Actions run.
 
 ### Existing pinned offline environment
