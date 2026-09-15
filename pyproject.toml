@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=83,<84", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -8,12 +8,12 @@ version = "0.1.1"
 description = "Residual-conditioned finite-horizon diagnostics and exact-cost decisions"
 readme = "README.md"
 requires-python = ">=3.11,<3.13"
-dependencies = ["numpy>=1.26,<2", "torch>=2.11,<2.12"]
+dependencies = ["numpy>=1.26,<2", "torch>=2.14,<2.15", "setuptools>=83,<84"]
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 [project.optional-dependencies]
-test = ["pytest>=8,<10", "PyYAML>=6,<7"]
+test = ["pytest>=8,<10", "build>=1.2,<2", "PyYAML>=6,<7"]
 dev = ["pytest>=8,<10", "build>=1.2,<2", "ruff>=0.16,<0.17", "PyYAML>=6,<7"]
 dit = ["diffusers==0.38.0"]
 

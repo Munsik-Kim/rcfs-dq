@@ -78,23 +78,29 @@ Neither scalar arithmetic nor recorded SHA identity recreates model predictions.
 ## Installation contracts
 
 Supported Python versions are 3.11 and 3.12. Runtime dependencies are
-NumPy >=1.26,<2 and PyTorch >=2.11,<2.12. The `test` extra adds pytest; `dev`
+NumPy >=1.26,<2, PyTorch >=2.14,<2.15 and setuptools >=83,<84. Builds use the
+same setuptools range. The direct runtime constraint also tightens Torch's
+transitive setuptools requirement for wheel installs outside our CPU constraints.
+The `test` extra adds pytest, build and YAML-validation tools; `dev`
 adds test, build, lint and YAML-validation tools. The optional `dit` extra adds
 Diffusers 0.38.0. Neither core import nor the example loads pretrained weights.
 
 The [CPU constraints](../requirements/cpu-constraints.txt) pin the Linux x86_64
-dependency set used by [CI](../.github/workflows/ci.yml). Install PyTorch first
-from its [official CPU index](https://download.pytorch.org/whl/cpu/torch/), then
-extras from PyPI, as shown in the development commands below. Python 3.13 and NumPy 2
+dependency set used by [CI](../.github/workflows/ci.yml). Install the constrained
+build tools from PyPI, then PyTorch from its
+[official CPU index](https://download.pytorch.org/whl/cpu/torch/), then project extras.
+The build tools must already satisfy the Torch dependency before using the
+separate CPU index. Python 3.13 and NumPy 2
 are outside this support contract. These CPU constraints do not prescribe a
 CUDA build for existing research environments.
 
 ### Editable development
 
-In a fresh virtual environment, after installing the constrained CPU PyTorch:
+In a fresh virtual environment:
 
 ```bash
 python -m pip install -c requirements/cpu-constraints.txt build setuptools wheel
+python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
 python -m pip install --no-build-isolation -c requirements/cpu-constraints.txt -e ".[dev,dit]"
 python -m pip check
 python -m pytest -q
@@ -133,15 +139,43 @@ A local equivalent run is not evidence of a completed hosted Actions run.
 
 ### Existing pinned offline environment
 
-When dependencies and build tools already exist, use the
+When the current supported dependencies and build tools already exist, use the
 offline command below. It cannot provision an empty
 offline machine. A system-site-packages virtual environment reuses dependencies
 and is not an isolated dependency-install test. The optional Diffusers `kernels`
 extension is not used by the example and is not required.
+`--no-deps` and `--no-build-isolation` do not upgrade an old environment. Check
+the current constraints and build-tool version first; an old historical research
+environment is not a qualified current package environment.
 
 ```bash
 python -m pip install --no-index --no-deps --no-build-isolation .
+python -m pip check
 ```
+
+### Dependency security update
+
+The current CPU contract pins torch 2.14.0+cpu and setuptools 83.0.0. Both the
+runtime metadata and isolated-build requirements exclude the previously flagged
+ranges; changing only the constraints would leave alternate installation paths.
+The tracked advisories are [PyTorch JIT](https://github.com/advisories/GHSA-rrmf-rvhw-rf47),
+setuptools [path traversal](https://github.com/advisories/GHSA-5rjg-fvgr-3xxf)
+and [Unicode exclusion](https://github.com/advisories/GHSA-h35f-9h28-mq5c).
+See the [upstream setuptools release record](https://setuptools.pypa.io/en/latest/history.html#v83-0-0).
+
+The public API does not load untrusted models or expose JIT compilation or
+PackageIndex downloads. Dependency remediation is not a claim that an exploit
+was reachable through an RCFS-DQ API, or that arbitrary model/code inputs are safe.
+The initially considered torch 2.13.0+cpu still failed the bare-container JIT
+regression in an isolated subprocess; it was not accepted on version metadata
+alone. The 2.14 release includes the [upstream JIT fix](https://github.com/pytorch/pytorch/commit/b90c94991cdf8b87c8f7439f79518e0ef2c4ca4f).
+Security regression tests exercise the supported build backend, bare local
+container annotations and ordinary typed JIT/file-exclusion behavior. They do
+not establish that every malformed JIT input is handled safely. These are
+software tests, not new science.
+Direct legacy distutils packaging is outside this build contract; its helper
+is not certified by the setuptools-backend exclusion check.
+Historical environment records and all scientific scalar payloads remain unchanged.
 
 ## Historical experiment boundary
 

@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+### Dependency security
+
+- Raise the current public runtime to torch >=2.14,<2.15 (CPU CI: 2.14.0+cpu)
+  and both runtime and isolated-build setuptools requirements to >=83,<84
+  (CI: 83.0.0). Include the build frontend in the test extra.
+- Exclude the dependency ranges flagged by GHSA-rrmf-rvhw-rf47,
+  GHSA-5rjg-fvgr-3xxf and GHSA-h35f-9h28-mq5c. Historical environments and
+  scientific artifacts are not upgraded or relabeled.
+- Add installed-version and fixed-boundary regression checks. Package version
+  remains 0.1.1; this entry does not create a release or a new scientific result.
+
 ### Limited local-mechanism closeout
 
 - Preserve the qualified V3 small-radius result separately from retrospective
