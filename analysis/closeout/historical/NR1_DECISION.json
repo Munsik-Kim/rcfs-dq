@@ -1,0 +1,206 @@
+{
+  "J1": "DESIGN_ONLY",
+  "L_pass_unique_triads": 132,
+  "NR0": "J0_NR0_FP32_ROUNDOFF_DOMINANT",
+  "N_pass_unique_triads": 132,
+  "P2": "DEFERRED",
+  "R_pass_unique_triads": 132,
+  "all_gates_pass_unique_triads": 132,
+  "confirmation_authorized": false,
+  "decision": "J0_NR1_V2_QUALIFIED",
+  "discovery_authorized": false,
+  "display_triads": 144,
+  "independent_verifier_required_before_finalization": true,
+  "new_gpu_calls": 0,
+  "new_model_calls": 0,
+  "new_quantization_events": 0,
+  "noncircular_target_coverage": true,
+  "numerical_envelopes_and_synthetic_pass": true,
+  "original_v1": "J0_NUMERICAL_METHOD_REVIEW",
+  "original_v1_failed_rows": 157,
+  "qualified_complete_strata": [
+    {
+      "event_stage": 4,
+      "family": "actual_local",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "donor",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "isotropic",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "accumulated",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "actual_local",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "donor",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "isotropic",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "accumulated",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "actual_local",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "donor",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "isotropic",
+      "group": "attention_output_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "donor",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "isotropic",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "accumulated",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "actual_local",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "donor",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "isotropic",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "accumulated",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "actual_local",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "donor",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "isotropic",
+      "group": "mlp_down_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "actual_local",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 4,
+      "family": "donor",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "accumulated",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "actual_local",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "donor",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 10,
+      "family": "isotropic",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "actual_local",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "donor",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    },
+    {
+      "event_stage": 15,
+      "family": "isotropic",
+      "group": "qkv_all_blocks",
+      "unique_triads": 4
+    }
+  ],
+  "science_GO_STOP": "NOT_EVALUATED",
+  "scope": "Operational FP32 finite-scale secants; not exact-model Jacobian certification",
+  "unique_triads": 132
+}

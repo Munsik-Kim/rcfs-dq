@@ -1,0 +1,248 @@
+{
+  "copied_files": [
+    {
+      "bytes": 2587048,
+      "path": "analysis/closeout/v3/finite_difference_rows.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "84455fffa5c822f8e2165a0ffc8c20bbbb902ac5748253d1bc38077a726be1ed",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/finite_difference_rows.csv"
+    },
+    {
+      "bytes": 1531722,
+      "path": "analysis/closeout/v3/prediction_rows.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "d1ad8a65167aebe3d98856f339befe6f1de03c716f2f26002258ba64cf70fcf1",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/prediction_rows.csv"
+    },
+    {
+      "bytes": 603738,
+      "path": "analysis/closeout/v3/qualification_rows.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "a8599b53bab97cb65cde7843211b36927c0eb90d2ab5bcb758b520931650ae87",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/qualification_rows.csv"
+    },
+    {
+      "bytes": 14185,
+      "path": "analysis/closeout/v3/class_endpoints.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "702298ef5c424c3b9790ea44daaaf3ab5f60d5f92f3551741a4868dd07090cdd",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/class_endpoints.csv"
+    },
+    {
+      "bytes": 4269,
+      "path": "analysis/closeout/v3/bootstrap_summary.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "94bdf3f679605dd1152182077bdbf41413bd0bbbe1e6426e078c90fa8469d6a8",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/bootstrap_summary.csv"
+    },
+    {
+      "bytes": 1490,
+      "path": "analysis/closeout/v3/paired_contrasts.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "c07e08fa8ddd252083e14e37fcea05e5dc67439ac45d33b965c457e68f675d9a",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/paired_contrasts.csv"
+    },
+    {
+      "bytes": 13961,
+      "path": "analysis/closeout/v3/prediction_tail_summary.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "e3b64f89e26c0079cfae10f4e15779c3fe91cd6afb35bb91fd6eac567ac9482c",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/tables/prediction_tail_summary.csv"
+    },
+    {
+      "bytes": 1033,
+      "path": "analysis/closeout/v3/DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "5d3311eaeb6eb7689cf2eae65e57d25feaa30251c5552ed3e0628ce2e347c36d",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/manifests/DECISION.json"
+    },
+    {
+      "bytes": 5633,
+      "path": "analysis/closeout/v3/INDEPENDENT_VERIFICATION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "84afe2b62ba48ca1a7750be29ff79db2641488d9abd6bc24907e86ba2f94e2b2",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/manifests/INDEPENDENT_VERIFICATION.json"
+    },
+    {
+      "bytes": 4068,
+      "path": "analysis/closeout/v3/ENVIRONMENT_SANITIZED.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "155793779927f57aa2bf581b064209aa5163cee4d2a7a8ee508ea3a27f7af32c",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "548f386baa6352e5151fb5fd111b8148414b5df6",
+      "source_path": "analysis/j0_jacobian_neglect/measurement_validation_v3/manifests/ENVIRONMENT_SANITIZED.json"
+    },
+    {
+      "bytes": 1441709,
+      "path": "analysis/closeout/bridge0/natural_error_rows.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "b56c0690f08f3ea9a470fa5ace19869de6f57a1a60e29b92e927ab4bb39f891f",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/natural_error_rows.csv"
+    },
+    {
+      "bytes": 8364,
+      "path": "analysis/closeout/bridge0/paired_comparisons.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "aeacb2e70ad1783d6439b94ab46e195d420f4d3ac6bdd084d27adaf6fde1d9ef",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/paired_comparisons.csv"
+    },
+    {
+      "bytes": 21668,
+      "path": "analysis/closeout/bridge0/class_endpoints.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "9c5138273ec82d9a93518aef8a70e89fc0783c298e344d6e09ee9a2ffa50d31f",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/class_endpoints.csv"
+    },
+    {
+      "bytes": 12641,
+      "path": "analysis/closeout/bridge0/tails_and_influence.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "79c328d621ab8b26f92be8ee5a1bee03f10b808aad9c9f278f19b23e28552d88",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/tails_and_influence.csv"
+    },
+    {
+      "bytes": 144192,
+      "path": "analysis/closeout/bridge0/geometry_and_remainder.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "bb800276c1abf73339491d7e790c85a55071b68e6214816443020780330d9f2e",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/geometry_and_remainder.csv"
+    },
+    {
+      "bytes": 110109,
+      "path": "analysis/closeout/bridge0/frozen_predictions.csv",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "659e4c2ad53c3bc12f58ea0e92e01164ffe3205445f508fc2cdb80bc9fcb1e7b",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/frozen_predictions.csv"
+    },
+    {
+      "bytes": 842,
+      "path": "analysis/closeout/bridge0/DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "ef65b90318844a76e607184a28dd388f5237b88ad5a7157e5317e14852221c03",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/DECISION.json"
+    },
+    {
+      "bytes": 3686,
+      "path": "analysis/closeout/bridge0/INDEPENDENT_VERIFICATION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "e43bb055efb818234f21a64e283eb5681012a1d92e89102e1ad81c8486c5a427",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "847634258266e1a6918865920bc064b041c5538c",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/INDEPENDENT_VERIFICATION.json"
+    },
+    {
+      "bytes": 28825,
+      "path": "analysis/closeout/bridge0/BRIDGE0_PROTOCOL.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "0cdfab08208b800f72ea27b683055218fefc6a993807a6f8015c35410e4caa41",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "de4c2334886b356d3388db22e216d677e6234a2e",
+      "source_path": "analysis/j0_jacobian_neglect/natural_error_bridge0/BRIDGE0_PROTOCOL.json"
+    },
+    {
+      "bytes": 18423,
+      "path": "analysis/closeout/historical/J0_V1_OUTCOME.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "e8517d96ac414f52d33fac7a871ce01cb5ced8d131f1436595051b7d110ae4c5",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "72259d3182f06d97c6a7182bfcc7a77300172fb9",
+      "source_path": "analysis/j0_jacobian_neglect/manifests/engineering_outcome_summary.json"
+    },
+    {
+      "bytes": 1824,
+      "path": "analysis/closeout/historical/NR0_DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "5e687d358556ee6a915d7029feb81ae744e5d7f7861a902163be313af7eb26f0",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "038cd756f1465bf6c9b20e5befc286c811d5a68b",
+      "source_path": "analysis/j0_jacobian_neglect/numerical_review_nr0/manifests/NR0_DECISION.json"
+    },
+    {
+      "bytes": 4785,
+      "path": "analysis/closeout/historical/NR1_DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "a109f04123cfe3d086556eead9b06c30b285e53631da0009e99f247749f5cdc5",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "9f1fdc487f9a4e788cb95c3d753c36278c7ba4d6",
+      "source_path": "analysis/j0_jacobian_neglect/numerical_review_nr1/manifests/NR1_DECISION.json"
+    },
+    {
+      "bytes": 730,
+      "path": "analysis/closeout/historical/V2_DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "821bea1dceafc2f090bd0ef6e9b5ff627c4640684cdfc8be3ee2bedadbeb9fff",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "bd6b0c8af5b84b3d3bb0f54400a22aa44ef8ec22",
+      "source_path": "analysis/j0_jacobian_neglect/discovery_v2/manifests/DECISION.json"
+    },
+    {
+      "bytes": 2220,
+      "path": "analysis/closeout/historical/CURV0_DECISION.json",
+      "role": "historical raw-derived scalar or recorded decision; public raw regeneration not claimed",
+      "sha256": "794a143f3951ed89b0cc0d23d37fd5f60fded5501a9e46a38bb8d53eb26addf2",
+      "source_bytes_unchanged": true,
+      "source_checkout": "24aebde3ba180093beb869f8471accda1aaed66b",
+      "source_file_commit": "2907f738bd0457a2e9fb647b99d4f1a441c04280",
+      "source_path": "analysis/j0_jacobian_neglect/curvature_review_curv0/manifests/CURV0_DECISION.json"
+    }
+  ],
+  "publication_GPU_calls": 0,
+  "publication_model_calls": 0,
+  "raw_included": false,
+  "source_commits_local_only": "Commit identities do not imply public availability of full research checkout"
+}

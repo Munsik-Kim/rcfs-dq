@@ -1,0 +1,43 @@
+{
+  "J1": "DESIGN_ONLY",
+  "P2": "DEFERRED",
+  "basis": "Evidence adjudication under requested NR0 taxonomy, not a new scientific threshold or GO gate",
+  "confirmation": "NOT_AUTHORIZED",
+  "confirmation_authorized": false,
+  "decision": "J0_NR0_FP32_ROUNDOFF_DOMINANT",
+  "discovery": "NOT_AUTHORIZED",
+  "discovery_authorized": false,
+  "evidence": {
+    "E64_analytic_bound_checks_pass": true,
+    "E64_norm_max": 6.377134010251579e-13,
+    "E64_norm_median": 2.8588984460303967e-13,
+    "E_obs_norm_median": 0.00015418538190072783,
+    "alpha_error_vector_direction_stable": false,
+    "alpha_log_slope_median": -0.9956809751039755,
+    "coefficient_rederived_exact": true,
+    "display_rows": 432,
+    "independent_arithmetic_pass": true,
+    "independent_operation_path_pass": true,
+    "operational_cpu_emulation_exact_arms": 1728,
+    "relative_unexplained_max": 1.9790233614475108e-09,
+    "unique_central_rows": 396,
+    "v1_failures_reproduced": 157
+  },
+  "new_gpu_scientific_calls": 0,
+  "new_model_calls": 0,
+  "new_quantization_events": 0,
+  "new_scientific_observations": 0,
+  "original_engineering_transformer_calls": 1416,
+  "original_v1_decision": "J0_NUMERICAL_METHOD_REVIEW",
+  "original_v1_engineering_qualification": "FAIL",
+  "preserved_negative_evidence": [
+    "v1 failed engineering qualification remains157/432",
+    "Initial NumPy and installed CPU direct-divide replay full-array bitwise equality0/1728",
+    "Alpha-scaled error vector directions are not stable",
+    "Eround closure alone is a construction identity, not independent causal evidence"
+  ],
+  "scope": "Retrospective CPU-only scheduler arithmetic review of saved J0 v1 engineering operands",
+  "unique_causal_attribution_established": false,
+  "v1_tolerance_changed": false,
+  "v2_status": "DESIGN_ONLY_RESOLUTION_GATE_UNSET"
+}

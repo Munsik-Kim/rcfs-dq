@@ -1,0 +1,32 @@
+{
+  "A_execution_integrity": true,
+  "B_measurement_validity": true,
+  "C_by_family": {
+    "accumulated": false,
+    "actual_local": true,
+    "donor": true,
+    "isotropic": true
+  },
+  "C_primary_tangent_qualified": true,
+  "D_finite_radius_application_certified": false,
+  "D_source_ratio_failures_unique_alpha_rows": 13,
+  "H3_coverage_complete": true,
+  "J1_authorized": false,
+  "N_failed_unique_alpha_rows": 0,
+  "P2_authorized": false,
+  "R_failed_unique_alpha_rows": 0,
+  "confirmation_authorized": false,
+  "coverage_complete": true,
+  "decision": "J0_V3_MEASUREMENT_VALIDATION_COMPLETE",
+  "displayed_alpha_rows": 3456,
+  "displayed_triads": 1152,
+  "followup_executed_model_calls": 0,
+  "historical_source_L_failures_unique_alpha_rows": 13,
+  "input_bound_failures": 0,
+  "operational_bound_failures": 0,
+  "original_J0_status": "J0_NUMERICAL_METHOD_REVIEW",
+  "primary_mechanism_screen": "NOJ_OMISSION_SIGNAL_REPLICATED_IN_SCOPE",
+  "scientific_STRONG_GO": false,
+  "unique_alpha_rows": 3168,
+  "unique_triads": 1056
+}

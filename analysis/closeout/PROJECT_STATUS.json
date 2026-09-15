@@ -1,0 +1,25 @@
+{
+  "active_product_priority": "MODELDIFF_GUARD_QUANT_QUALIFY",
+  "active_research_priority": "ADAPTIVE_HEADROOM_STRONG_BASELINE_AUDIT",
+  "deferred": [
+    "J1_RTN_VS_GPTQ",
+    "P2_STAGE_NEUTRAL",
+    "PROBE16_NATURAL_SUPPLEMENT"
+  ],
+  "deferred_is_not_disproven": true,
+  "historical_scientific_statuses": {
+    "BRIDGE0_analysis": "COMPLETE_EXISTING_SCOPE",
+    "BRIDGE0_next_action": "CLOSE_LOCAL_TO_NATURAL_BRIDGE_AS_LIMITED",
+    "CURV0": "CURV0_TANGENT_STABLE_FINITE_RADIUS_LIMIT",
+    "J0_v1": "J0_NUMERICAL_METHOD_REVIEW",
+    "J0_v2": "J0_NUMERICAL_METHOD_REVIEW",
+    "NR0": "J0_NR0_FP32_ROUNDOFF_DOMINANT",
+    "NR1": "J0_NR1_V2_QUALIFIED",
+    "Tail0": "E1TAIL0_NO_USEFUL_EXCEPTION_SIGNAL",
+    "V3": "J0_V3_MEASUREMENT_VALIDATION_COMPLETE",
+    "V3_omission_screen": "NOJ_OMISSION_SIGNAL_REPLICATED_IN_SCOPE"
+  },
+  "new_scientific_execution_authorized": false,
+  "project_level_closeout": "RCFS_DQ_LOCAL_MECHANISM_TRACK_CLOSED_AS_LIMITED",
+  "status_kind": "project management/research scope; not a historical scientific gate"
+}
