@@ -15,6 +15,11 @@
    recalculate regret and class-block intervals, with a separate audit inventory.
    Model calls = 0; GPU calls = 0; new model observations = 0;
    predictor refits = 0; new prospective confirmation = 0.
+5. **Closeout scalar reference:** separately inventoried V3/BRIDGE0 scalar rows
+   and historical decisions. Recompute coverage, C/D rules, inherited R/N
+   flags, normalization, class aggregation, paired bootstrap, tails and influence.
+   Independent NumPy code imports no research prediction/gate implementation.
+   Stored norms/errors remain inputs, not independently regenerated vectors.
 
 The public evidence check does not independently regenerate terminal risk from
 raw tensors, rerun discovery/confirmation, or replay the entire internal science
@@ -41,6 +46,9 @@ python scripts/audit_pairing_ablation.py --check
 python scripts/verify_baseline_audit.py --check
 python scripts/verify_baseline_audit.py --pairing --check
 python scripts/verify_public_audits.py
+python -O scripts/verify_public_audits.py
+python scripts/verify_closeout_evidence.py
+python -O scripts/verify_closeout_evidence.py
 ```
 
 Evidence validation uses explicit failures, not removable Python assertions;
@@ -58,6 +66,15 @@ residual and response tensors are not included. Hash agreement cannot establish
 that the historical model outputs or tangent conditions were independently
 regenerated. See [P0 definitions](BASELINE_AUDIT.md) and [P1 scope](PAIRING_ABLATION.md).
 
+## Closeout scalar scope
+
+[PUBLIC_CLOSEOUT_MANIFEST.json](../PUBLIC_CLOSEOUT_MANIFEST.json) is a third,
+separate provenance layer. Source decisions/tables retain their original bytes;
+the public scalar reference cannot rerun historical raw-verifier receipts.
+V3 uses a four-seed median, nine-spec/eight-class estimator at small radius;
+BRIDGE0 uses a four-seed mean, six available specs/eight classes at natural scale.
+Neither scalar arithmetic nor recorded SHA identity recreates model predictions.
+
 ## Installation contracts
 
 Supported Python versions are 3.11 and 3.12. Runtime dependencies are
@@ -68,7 +85,7 @@ Diffusers 0.38.0. Neither core import nor the example loads pretrained weights.
 The [CPU constraints](../requirements/cpu-constraints.txt) pin the Linux x86_64
 dependency set used by [CI](../.github/workflows/ci.yml). Install PyTorch first
 from its [official CPU index](https://download.pytorch.org/whl/cpu/torch/), then
-extras from PyPI, as shown in the [README](../README.md). Python 3.13 and NumPy 2
+extras from PyPI, as shown in the development commands below. Python 3.13 and NumPy 2
 are outside this support contract. These CPU constraints do not prescribe a
 CUDA build for existing research environments.
 
@@ -116,11 +133,15 @@ A local equivalent run is not evidence of a completed hosted Actions run.
 
 ### Existing pinned offline environment
 
-When dependencies and build tools already exist, use the README's
-`--no-index --no-deps --no-build-isolation` command. It cannot provision an empty
+When dependencies and build tools already exist, use the
+offline command below. It cannot provision an empty
 offline machine. A system-site-packages virtual environment reuses dependencies
 and is not an isolated dependency-install test. The optional Diffusers `kernels`
 extension is not used by the example and is not required.
+
+```bash
+python -m pip install --no-index --no-deps --no-build-isolation .
+```
 
 ## Historical experiment boundary
 

@@ -64,6 +64,10 @@ jobs:
           python -O scripts/verify_public_audits.py
       - name: Public secret, path and payload hygiene
         run: python scripts/check_public_hygiene.py
+      - name: Verify local and natural closeout scalar evidence
+        run: |
+          python scripts/verify_closeout_evidence.py
+          python -O scripts/verify_closeout_evidence.py
       - name: Offline tiny random DiT smoke
         run: python examples/compact_dit.py
       - name: Lint and format
@@ -74,4 +78,5 @@ jobs:
         run: |
           git diff --exit-code HEAD -- evidence figures configs PUBLIC_EVIDENCE_MANIFEST.json LICENSE
           git diff --exit-code HEAD -- analysis PUBLIC_AUDIT_MANIFEST.json
+          git diff --exit-code HEAD -- PUBLIC_CLOSEOUT_MANIFEST.json
           git diff --check

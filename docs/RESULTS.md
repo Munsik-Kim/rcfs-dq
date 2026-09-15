@@ -163,7 +163,130 @@ TP/FP/FN/TN = 3/474/76/1175: recall 3.80%, FPR 28.74%, AP 0.0519 and ROC-AUC
 override this failed preregistered detection gate. The detector is not packaged
 as a validated protective method, and no threshold was refitted here.
 
-## What remains open
+## Numerical measurement: failure is not rewritten as success
+
+J0 v1 retained `J0_NUMERICAL_METHOD_REVIEW`: 157/432 model-Jv consistency rows
+failed (QKV31/144, attention-output126/144, MLP-down0/144). NR0 recorded
+`J0_NR0_FP32_ROUNDOFF_DOMINANT`: CPU emulation reproduced the operational
+CUDA arithmetic on 1,728/1,728 arms bitwise. Scheduler-only FP64 identity
+residual median was 2.8588984460303967e-13 versus operational mismatch median
+0.00015418538190072783. These are historical raw-review records, not new model
+execution or a retroactive v1 PASS. Alpha-scaled error vector directions were
+not stable; inverse-alpha norm scaling is not unique causal proof.
+
+NR1 recorded `J0_NR1_V2_QUALIFIED`; v2 discovery still retained
+`J0_NUMERICAL_METHOD_REVIEW`. CURV0 separated tangent stability from finite-radius
+limitations. [Original decision bytes](../analysis/closeout/SOURCE_PROVENANCE.json)
+remain separate from the project-level closeout.
+
+## V3: small-radius local prediction, not deployment
+
+V3 recorded `J0_V3_MEASUREMENT_VALIDATION_COMPLETE` and
+`NOJ_OMISSION_SIGNAL_REPLICATED_IN_SCOPE`. A/B passed. C passed for actual-local,
+donor and isotropic but not accumulated: one unique alpha row failed C.
+D's reference ratio failed in 13 rows; no application accuracy certificate or
+scientific STRONG_GO was issued. All 3,168 unique alpha rows (3,456 displayed,
+including event4 aliases) remain represented.
+
+Target: `Phi64(x_h,p_h)-Phi64(x0,p0)`, h=1/128. No-J is the frozen direct
+scheduler response; Scalar multiplies it by frozen stage gamma; Full adds
+`h*B*Jv`, estimated from ±1/64 FP32 model predictions. Only scheduler arithmetic
+is FP64. Full uses two extra directional evaluations: not equal-compute or
+FP64-model evidence. The target also participates in qualification, so its
+same-input replay is not independent confirmation.
+
+Actual-local R_J = **0.3111267363317709**, one-sided 95% lower bound
+0.3060398760471626; two-sided 95% interval [0.3049774016278689, 0.31679672795224467].
+R_J is not amplification, safety or a causal contribution fraction.
+
+| Local predictor | Absolute response error | Target-normalized error |
+|---|---:|---:|
+| No-J | 0.009388417697 | 0.3111789765 |
+| Frozen Scalar | 0.002436536102 | 0.1534873139 |
+| Full | 0.00001952561952 | 0.001917844839 |
+
+| V3 paired comparison | Point | Ordinary two-sided 95% CI |
+|---|---:|---|
+| Full − No-J absolute error | −0.009369768768 | [−0.009575814568, −0.009148784936] |
+| Full − Scalar absolute error | −0.002417480047 | [−0.002631081715, −0.002214321263] |
+| Scalar − No-J absolute error | −0.006942218594 | [−0.007089716863, −0.006816774926] |
+| Actual − Donor R_J | −0.01567458408 | [−0.02417337985, −0.007729434345] |
+| Actual − Isotropic R_J | −0.02192652097 | [−0.03126878647, −0.01338313022] |
+
+Aggregation: raw paired difference → four-seed median → nine group/event means
+→ eight equal class blocks; ascending class order, PCG64(2026091501), 10,000
+shared draws, linear quantiles. A difference of policy medians is not the
+median of paired differences. Source tables retain descriptive 99% intervals;
+`familywise95` is not an exact finite-sample FWER guarantee. Actual-local R_J
+was lower than controls; uniquely larger actual-residual omission is unsupported.
+
+## BRIDGE0: natural error does not inherit small-radius benefit
+
+This is a retrospective CPU-only existing-data audit—not prospective
+confirmation. Availability and estimators were locked before natural-error
+computation, after V3 had been seen: not fresh prospective preregistration.
+
+After one stage4 W4 intervention, restored-model targets exist for probe5→6 and
+probe11→12: **192 available of 288 intended**. The 96 probe16→17 targets are
+**NOT_STORED**, not zero; no three-probe aggregate exists. Probe11 label10 is
+bookkeeping, not a new intervention. Probe5 actual-local/accumulated is one alias.
+
+Primary target: stored operational `float64(yq)-float64(y)`. With delta from
+promoted absolute states, `a=A*delta`, `b=B*Jhat(v32)` from frozen ±1/64,
+compare a, gamma*a and a+b. Full has no 1/128 multiplier here. Natural pq/target
+does not enter the predictor. v32 need not equal exact delta: this is tangent
+extrapolation, not exact J*delta evaluation.
+
+| Natural predictor | Mean absolute error | Mean squared error | Mean relative error |
+|---|---:|---:|---:|
+| No-J | 1.81863194598 | 9.24765501587 | 0.314020170790 |
+| Frozen Scalar | 0.437656810944 | 0.893050640655 | 0.081002916310 |
+| Full | 0.447913842013 | 1.42282333263 | 0.030499247943 |
+
+Primary **Full − Scalar mean absolute error = +0.010257031069072282**,
+two-sided 95% CI **[−0.0493295519449765, +0.08334563696936302]**.
+Full − No-J = −1.37071810396972 [−1.4400542307546733, −1.291149808334443].
+Mean: four-seed arithmetic mean → six available group/probe means → eight
+equal class blocks; PCG64(2026091502), 10,000 shared draws, ascending class order,
+linear .025/.975 quantiles. V3 instead used seed median. Supplementary paired
+seed-median: −0.0464002531 [−0.0556364314, −0.0366437847]; not a primary replacement.
+
+Full beat Scalar on **178/192**, hurt on **14/192**, tied on zero. All hurts
+were MLP-down/probe11. Many small wins do not outweigh large losses under a mean
+endpoint. Five of eight class differences were negative; omitting class123 or206
+reverses the mean's sign. No class/failed row was deleted. Relative-error benefit
+remains a different secondary estimand. Neither superiority nor equivalence
+follows from the primary interval crossing zero.
+
+| Natural predictor tails | Raw Q95 absolute error | Raw Q99 | Maximum |
+|---|---:|---:|---:|
+| No-J | 6.56919776578 | 6.77545006218 | 6.83846159864 |
+| Frozen Scalar | 2.52449356582 | 2.83593081789 | 2.89988273782 |
+| Full | 2.53882950938 | 3.90952267354 | 7.62294167431 |
+
+Full's maximum is class206/seed107/MLP-down/probe11, the inherited C failure.
+Probe5 Full−Scalar = −0.0381507908; probe11 = +0.0586648529. All group/probe,
+tail and influence rows remain descriptive, not a validated group-routing
+policy. Accumulated remains C-unqualified; inherited C/D failures did not
+filter natural errors. Missing targets and unresolved ratios remain null.
+
+Scheduler-only FP64 target Full−Scalar = +0.010257054894255536,
+95% CI [−0.04932953385155472, +0.08334565595387161]. Policy rank and Full−Scalar
+sign agree with operational targets on all192 transitions. Signed perpendicular/
+remainder terms show cancellation; the remainder is not a pure Hessian or
+independent noise term.
+
+The [closeout inventory](../PUBLIC_CLOSEOUT_MANIFEST.json) includes historical
+raw-verifier receipts. New public verification independently checks scalar
+arithmetic and aggregation—not raw vectors, GPU replay or fresh qualification.
+
+## Project-level closeout and what remains open
+
+`RCFS_DQ_LOCAL_MECHANISM_TRACK_CLOSED_AS_LIMITED` is a research-scope decision,
+not a replacement scientific gate. Local information improved small-radius
+prediction; stable natural-scale class-balanced mean benefit over strong Scalar
+was not established. This path is closed as limited rather than refitted or
+promoted to a deployment or quantizer-selection method.
 
 The evidence supports residual–geometry coupling and the original prospective
 native-dtype improvement over Energy under the tested scope. The retrospective
