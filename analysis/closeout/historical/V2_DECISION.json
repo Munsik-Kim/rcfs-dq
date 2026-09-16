@@ -1,0 +1,22 @@
+{
+  "H3_coverage_complete": true,
+  "J1": "DESIGN_ONLY",
+  "L_failed_unique_alpha_rows": 3,
+  "N_failed_unique_alpha_rows": 0,
+  "P2": "DEFERRED",
+  "R_failed_unique_alpha_rows": 0,
+  "STOP_conditions": null,
+  "confirmation_authorized": false,
+  "coverage_complete": true,
+  "decision": "J0_NUMERICAL_METHOD_REVIEW",
+  "discovery_R_J_trigger": null,
+  "discovery_improvement_trigger": null,
+  "followup_executed_model_calls": 0,
+  "input_bound_failures": 0,
+  "interpretation_scope": "Operational FP32 finite-scale secants with FP64 scheduler-only reconstruction",
+  "numerical_validity": false,
+  "operational_bound_failures": 0,
+  "scientific_STRONG_GO": false,
+  "summary_coverage_complete": true,
+  "target_complete": true
+}

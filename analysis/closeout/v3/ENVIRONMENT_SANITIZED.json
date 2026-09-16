@@ -1,0 +1,164 @@
+{
+  "autocast": false,
+  "backend": {
+    "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+    "PYTHONHASHSEED": "0",
+    "allow_tf32_cudnn": false,
+    "allow_tf32_matmul": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": true,
+    "flash_sdp_enabled": false,
+    "math_sdp_enabled": true,
+    "mem_efficient_sdp_enabled": false
+  },
+  "cuda": "12.8",
+  "initial_noise_dtype": "float16",
+  "model_dtype": "torch.float32",
+  "packages": {
+    "diffusers": "0.38.0",
+    "numpy": "1.26.4",
+    "pandas": "3.0.3",
+    "scipy": "1.17.1",
+    "torch": "2.11.0+cu128"
+  },
+  "prefix_dtype": "float32",
+  "python": "3.11.15",
+  "scheduler": {
+    "alphas_sha": "b5555536933367c4ad73b4e972e1701b8cf631f368d370f1f05c23c5881f1994",
+    "class": "DDIMScheduler",
+    "config": {
+      "_class_name": "DDIMScheduler",
+      "_diffusers_version": "0.12.0.dev0",
+      "_use_default_values": [
+        "timestep_spacing",
+        "rescale_betas_zero_snr",
+        "clip_sample_range",
+        "thresholding",
+        "sample_max_value",
+        "dynamic_thresholding_ratio"
+      ],
+      "beta_end": 0.02,
+      "beta_schedule": "linear",
+      "beta_start": 0.0001,
+      "clip_sample": false,
+      "clip_sample_range": 1.0,
+      "dynamic_thresholding_ratio": 0.995,
+      "num_train_timesteps": 1000,
+      "prediction_type": "epsilon",
+      "rescale_betas_zero_snr": false,
+      "sample_max_value": 1.0,
+      "set_alpha_to_one": true,
+      "steps_offset": 0,
+      "thresholding": false,
+      "timestep_spacing": "leading",
+      "trained_betas": null
+    },
+    "final_alpha_sha": "e00e5eb9444182f352323374ef4e08ebcb784725fdd4fd612d7730540b3e0c8c",
+    "num_inference_steps": 20,
+    "timesteps_sha": "d8518324c3437a0b7c27d4ae97cc7dd6814ffb688508cfba3275be25a4436c29"
+  },
+  "scheduler_step_source_sha256": "00121d2b78c919c1e531b7238270c5482c8479eae3dc6a8ddc80f2648d55ce40",
+  "stages": [
+    {
+      "log_snr": -9.15157081254923,
+      "scheduler_timestep": 950,
+      "stage_index": 0
+    },
+    {
+      "log_snr": -8.215913206130828,
+      "scheduler_timestep": 900,
+      "stage_index": 1
+    },
+    {
+      "log_snr": -7.330749734700969,
+      "scheduler_timestep": 850,
+      "stage_index": 2
+    },
+    {
+      "log_snr": -6.4957801014526915,
+      "scheduler_timestep": 800,
+      "stage_index": 3
+    },
+    {
+      "log_snr": -5.710479153230583,
+      "scheduler_timestep": 750,
+      "stage_index": 4
+    },
+    {
+      "log_snr": -4.973949796913577,
+      "scheduler_timestep": 700,
+      "stage_index": 5
+    },
+    {
+      "log_snr": -4.284725174787744,
+      "scheduler_timestep": 650,
+      "stage_index": 6
+    },
+    {
+      "log_snr": -3.6405338378509247,
+      "scheduler_timestep": 600,
+      "stage_index": 7
+    },
+    {
+      "log_snr": -3.038051898712211,
+      "scheduler_timestep": 550,
+      "stage_index": 8
+    },
+    {
+      "log_snr": -2.472667340648535,
+      "scheduler_timestep": 500,
+      "stage_index": 9
+    },
+    {
+      "log_snr": -1.9382627928027294,
+      "scheduler_timestep": 450,
+      "stage_index": 10
+    },
+    {
+      "log_snr": -1.4269652756886582,
+      "scheduler_timestep": 400,
+      "stage_index": 11
+    },
+    {
+      "log_snr": -0.9287297004677777,
+      "scheduler_timestep": 350,
+      "stage_index": 12
+    },
+    {
+      "log_snr": -0.43048291986966053,
+      "scheduler_timestep": 300,
+      "stage_index": 13
+    },
+    {
+      "log_snr": 0.08574442377824863,
+      "scheduler_timestep": 250,
+      "stage_index": 14
+    },
+    {
+      "log_snr": 0.6470573463745164,
+      "scheduler_timestep": 200,
+      "stage_index": 15
+    },
+    {
+      "log_snr": 1.3003084122035027,
+      "scheduler_timestep": 150,
+      "stage_index": 16
+    },
+    {
+      "log_snr": 2.1443685260453185,
+      "scheduler_timestep": 100,
+      "stage_index": 17
+    },
+    {
+      "log_snr": 3.4744275499730746,
+      "scheduler_timestep": 50,
+      "stage_index": 18
+    },
+    {
+      "log_snr": 9.210074424815609,
+      "scheduler_timestep": 0,
+      "stage_index": 19
+    }
+  ]
+}

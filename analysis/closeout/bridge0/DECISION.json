@@ -1,0 +1,25 @@
+{
+  "analysis_status": "COMPLETE_EXISTING_SCOPE",
+  "analyzed_targets": 192,
+  "available_targets": 192,
+  "bootstrap_index_sha256": "3fd26162c9b0b66437749bb8aecdf6d91c1d7be77852c614c685d240556de58d",
+  "closure_verified": true,
+  "historical_V3_decision": "unchanged",
+  "independent_verification_required": true,
+  "intended_targets": 288,
+  "new_GPU_calls": 0,
+  "new_fitting": 0,
+  "new_model_calls": 0,
+  "next_action": "CLOSE_LOCAL_TO_NATURAL_BRIDGE_AS_LIMITED",
+  "primary_CI95": [
+    -0.0493295519449765,
+    0.08334563696936302
+  ],
+  "primary_contrast": "Full-Scalar absolute error",
+  "primary_point": 0.010257031069072282,
+  "primary_target": "operational",
+  "remote_publication": "not performed",
+  "scope": "retrospective natural-error bridge",
+  "supplemental_execution_authorization": false,
+  "three_probe_summary": null
+}

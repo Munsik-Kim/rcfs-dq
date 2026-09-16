@@ -38,8 +38,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install CPU dependencies
         run: |
-          python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -c requirements/cpu-constraints.txt build setuptools wheel
+          python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
           python -m pip install --no-build-isolation -c requirements/cpu-constraints.txt ".[dev,dit]"
           python -m pip check
       - name: Build and install wheel
@@ -51,7 +51,10 @@ jobs:
         run: |
           python -I -c 'import pathlib, sysconfig, rcfs_dq; p = pathlib.Path(rcfs_dq.__file__).resolve(); assert p.is_relative_to(pathlib.Path(sysconfig.get_paths()["purelib"]).resolve()); assert rcfs_dq.__version__ == "0.1.1"; print(p, rcfs_dq.__version__)'
       - name: Core, regressions and public hygiene
-        run: python -m pytest -q
+        run: |
+          python -m pytest -q
+          python -m pytest -q -m project_security_gate
+          python -m pytest -q -m upstream_dependency_sentinel
       - name: Verify scalar evidence and protected hashes
         run: |
           python scripts/verify_evidence.py
@@ -64,6 +67,10 @@ jobs:
           python -O scripts/verify_public_audits.py
       - name: Public secret, path and payload hygiene
         run: python scripts/check_public_hygiene.py
+      - name: Verify local and natural closeout scalar evidence
+        run: |
+          python scripts/verify_closeout_evidence.py
+          python -O scripts/verify_closeout_evidence.py
       - name: Offline tiny random DiT smoke
         run: python examples/compact_dit.py
       - name: Lint and format
@@ -74,4 +81,5 @@ jobs:
         run: |
           git diff --exit-code HEAD -- evidence figures configs PUBLIC_EVIDENCE_MANIFEST.json LICENSE
           git diff --exit-code HEAD -- analysis PUBLIC_AUDIT_MANIFEST.json
+          git diff --exit-code HEAD -- PUBLIC_CLOSEOUT_MANIFEST.json
           git diff --check

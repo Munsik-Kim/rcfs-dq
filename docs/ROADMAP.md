@@ -1,47 +1,35 @@
-# Roadmap
+# Roadmap after limited closeout
 
-P0/P1 are completed retrospective scalar audits, not prospective confirmation.
-They preserve residual–geometry coupling and improvement over Energy while
-leaving additional adaptive utility beyond strong fixed/stage priors unresolved.
-The competitive Constant, latest-stage result and E1-Tail0 negative result
-constrain the next steps rather than being replaced by new success criteria.
+The local-mechanism-to-natural-utility track is closed as limited. Its historical
+decisions, negative observations and missing data remain intact. No default
+alpha tuning, gamma refitting, MLP rescue or missing-probe completion is planned.
+The following are priorities for separate review, not execution authorizations.
 
-## 1. P2: stage-neutral prospective decision test
+## A. External measurement generalization — OPTIONAL / RESEARCH
 
-This is the highest-priority **future protocol**, not an executed experiment.
-Hold stage, exact cost and precision fixed while candidate group varies, or
-use an equivalently locked task where stage identity cannot supply a trivial
-solution. Resolve exact candidate membership and cost from source definitions
-before choosing a fresh panel; approximate cost bins are not a substitute.
+Only with a clear publication objective, test the already-frozen measurement
+question on a genuinely new model, scheduler or quantizer. Preregister strong
+baselines, input separation, error-scale targets, endpoints and tail handling.
+Do not assume either universal Jacobian importance or universal uselessness.
 
-Compare a strong development-only fixed policy, Energy, isotropic geometry,
-donor geometry and actual residual geometry. Freeze all scores, matched control
-support, tie rules, inputs and analysis before held-out terminal observations.
-Do not refit historical beta/G on test failures or choose candidate sets after
-seeing their outcomes.
+## B. Adaptive-headroom / strong-baseline audit — PRIORITY RESEARCH
 
-The primary endpoint is **mean absolute regret**. Normalized regret, Q95, Q99,
-maximum regret and oracle diversity are secondary. Use paired class-block
-uncertainty and retain catastrophic tails; a favorable normalized average is
-not a substitute for absolute-risk improvement. Any sample size, margins and
-compute budget must be specified in a separate protocol before execution.
+Measure whether a task offers enough adaptive headroom to justify complexity:
+best fixed expected loss minus expected per-input oracle loss. Report oracle
+diversity, absolute and normalized headroom, tails, and strong fixed and
+zero-parameter heuristics before crediting an adaptive policy. A test-best-fixed
+diagnostic is not a deployable policy learned without test outcomes.
+Do not assume the stage degeneracy found here characterizes every benchmark.
 
-## 2. Real packed execution utility and decoded/task quality
+## C. ModelDiff Guard / quant-qualify — PRIORITY PRODUCT
 
-After the decision question is addressed, evaluate an actual packed path with
-measured storage, resident memory, latency and reproducible decoded/task quality.
-Theoretical saving bits and fake quantization do not establish these endpoints.
-Report unsuccessful backends and quality/runtime tradeoffs alongside successes.
-External architecture generalization is a separate unresolved validation question,
-not established by either scalar audits or a faster kernel on the same model.
+Reuse artifact identity, provenance, workload binding, replay, resource
+measurement and catastrophic-tail checks to qualify an existing quantized
+artifact for an explicitly observed workload and hardware scope. Require
+decoded/task-quality and resource criteria, conversion/setup accounting and
+regression checks. This is not a new RCFS optimizer or universal safety
+certification. No acceptance of a deployment artifact is established here.
 
-## 3. Allocation only after those checks
-
-Only then review multi-stage and interaction-aware allocation under matched
-budgets. Single-intervention decisions do not prove joint composability,
-decoded quality, or deployment benefit. No P2 model execution or allocation
-experiment is part of this public integration.
-
-Do not extend precision-mechanism probing indefinitely or fit a more complex
-exception detector to failed test outcomes. Mechanism, measurement and limited
-frozen decision results remain useful even if an allocation claim never follows.
+J1 RTN-vs-GPTQ, P2 stage-neutral decisions and the probe16 natural supplement
+are **DEFERRED / NOT CURRENTLY AUTHORIZED**, not scientifically disproven.
+Allocation and new scientific experiments are not automatic follow-ups.

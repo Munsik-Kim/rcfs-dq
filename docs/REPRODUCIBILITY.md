@@ -15,6 +15,11 @@
    recalculate regret and class-block intervals, with a separate audit inventory.
    Model calls = 0; GPU calls = 0; new model observations = 0;
    predictor refits = 0; new prospective confirmation = 0.
+5. **Closeout scalar reference:** separately inventoried V3/BRIDGE0 scalar rows
+   and historical decisions. Recompute coverage, C/D rules, inherited R/N
+   flags, normalization, class aggregation, paired bootstrap, tails and influence.
+   Independent NumPy code imports no research prediction/gate implementation.
+   Stored norms/errors remain inputs, not independently regenerated vectors.
 
 The public evidence check does not independently regenerate terminal risk from
 raw tensors, rerun discovery/confirmation, or replay the entire internal science
@@ -41,6 +46,9 @@ python scripts/audit_pairing_ablation.py --check
 python scripts/verify_baseline_audit.py --check
 python scripts/verify_baseline_audit.py --pairing --check
 python scripts/verify_public_audits.py
+python -O scripts/verify_public_audits.py
+python scripts/verify_closeout_evidence.py
+python -O scripts/verify_closeout_evidence.py
 ```
 
 Evidence validation uses explicit failures, not removable Python assertions;
@@ -58,26 +66,41 @@ residual and response tensors are not included. Hash agreement cannot establish
 that the historical model outputs or tangent conditions were independently
 regenerated. See [P0 definitions](BASELINE_AUDIT.md) and [P1 scope](PAIRING_ABLATION.md).
 
+## Closeout scalar scope
+
+[PUBLIC_CLOSEOUT_MANIFEST.json](../PUBLIC_CLOSEOUT_MANIFEST.json) is a third,
+separate provenance layer. Source decisions/tables retain their original bytes;
+the public scalar reference cannot rerun historical raw-verifier receipts.
+V3 uses a four-seed median, nine-spec/eight-class estimator at small radius;
+BRIDGE0 uses a four-seed mean, six available specs/eight classes at natural scale.
+Neither scalar arithmetic nor recorded SHA identity recreates model predictions.
+
 ## Installation contracts
 
 Supported Python versions are 3.11 and 3.12. Runtime dependencies are
-NumPy >=1.26,<2 and PyTorch >=2.11,<2.12. The `test` extra adds pytest; `dev`
+NumPy >=1.26,<2, PyTorch >=2.14,<2.15 and setuptools >=83,<84. Builds use the
+same setuptools range. The direct runtime constraint also tightens Torch's
+transitive setuptools requirement for wheel installs outside our CPU constraints.
+The `test` extra adds pytest, build and YAML-validation tools; `dev`
 adds test, build, lint and YAML-validation tools. The optional `dit` extra adds
 Diffusers 0.38.0. Neither core import nor the example loads pretrained weights.
 
 The [CPU constraints](../requirements/cpu-constraints.txt) pin the Linux x86_64
-dependency set used by [CI](../.github/workflows/ci.yml). Install PyTorch first
-from its [official CPU index](https://download.pytorch.org/whl/cpu/torch/), then
-extras from PyPI, as shown in the [README](../README.md). Python 3.13 and NumPy 2
+dependency set used by [CI](../.github/workflows/ci.yml). Install the constrained
+build tools from PyPI, then PyTorch from its
+[official CPU index](https://download.pytorch.org/whl/cpu/torch/), then project extras.
+The build tools must already satisfy the Torch dependency before using the
+separate CPU index. Python 3.13 and NumPy 2
 are outside this support contract. These CPU constraints do not prescribe a
 CUDA build for existing research environments.
 
 ### Editable development
 
-In a fresh virtual environment, after installing the constrained CPU PyTorch:
+In a fresh virtual environment:
 
 ```bash
 python -m pip install -c requirements/cpu-constraints.txt build setuptools wheel
+python -m pip install -c requirements/cpu-constraints.txt torch --index-url https://download.pytorch.org/whl/cpu
 python -m pip install --no-build-isolation -c requirements/cpu-constraints.txt -e ".[dev,dit]"
 python -m pip check
 python -m pytest -q
@@ -116,11 +139,74 @@ A local equivalent run is not evidence of a completed hosted Actions run.
 
 ### Existing pinned offline environment
 
-When dependencies and build tools already exist, use the README's
-`--no-index --no-deps --no-build-isolation` command. It cannot provision an empty
+When the current supported dependencies and build tools already exist, use the
+offline command below. It cannot provision an empty
 offline machine. A system-site-packages virtual environment reuses dependencies
 and is not an isolated dependency-install test. The optional Diffusers `kernels`
 extension is not used by the example and is not required.
+`--no-deps` and `--no-build-isolation` do not upgrade an old environment. Check
+the current constraints and build-tool version first; an old historical research
+environment is not a qualified current package environment.
+
+```bash
+python -m pip install --no-index --no-deps --no-build-isolation .
+python -m pip check
+```
+
+### Dependency security update
+
+The current CPU contract pins torch 2.14.0+cpu and setuptools 83.0.0. Both the
+runtime metadata and isolated-build requirements exclude the previously flagged
+ranges; changing only the constraints would leave alternate installation paths.
+The tracked advisories are [PyTorch JIT](https://github.com/advisories/GHSA-rrmf-rvhw-rf47),
+setuptools [path traversal](https://github.com/advisories/GHSA-5rjg-fvgr-3xxf)
+and [Unicode exclusion](https://github.com/advisories/GHSA-h35f-9h28-mq5c).
+See the [upstream setuptools release record](https://setuptools.pypa.io/en/latest/history.html#v83-0-0).
+
+The public API does not load untrusted models or expose JIT compilation or
+PackageIndex downloads. Dependency remediation is not a claim that an exploit
+was reachable through an RCFS-DQ API, or that arbitrary model/code inputs are safe.
+The initially considered torch 2.13.0+cpu still failed the bare-container JIT
+regression in an isolated subprocess; it was not accepted on version metadata
+alone. The 2.14 release includes the [upstream JIT fix](https://github.com/pytorch/pytorch/commit/b90c94991cdf8b87c8f7439f79518e0ef2c4ca4f).
+Security regression tests exercise the supported build backend, bare local
+container annotations and ordinary typed JIT/file-exclusion behavior. They do
+not establish that every malformed JIT input is handled safely. These are
+software tests, not new science.
+Direct legacy distutils packaging is outside this build contract; its helper
+is not certified by the setuptools-backend exclusion check.
+Historical environment records and all scientific scalar payloads remain unchanged.
+
+### Project boundary versus upstream JIT stress
+
+RCFS-DQ has no supported TorchScript source input or checkpoint deserializer.
+The adapter receives already-constructed trusted Python model/scheduler objects;
+continuation/update callbacks are executable caller code, not sandboxed inputs.
+Direct upstream JIT use is outside this input boundary. Do not execute untrusted
+model code, source, checkpoints or pickle/Python artifacts because an installed
+dependency version happens to accept them. See [the security policy](../SECURITY.md).
+
+The advisory-linked original reproducer and fixed assignment regressions rejected
+with controlled exceptions on the pinned CPU environment. Two related type-path
+variants still produced native crashes in isolated Python 3.11/3.12 subprocesses.
+Those observations are retained as separate upstream candidates, not attributed
+to the same CVE and not described as fixed. The traced supported RCFS path does
+not compile or deserialize their inputs. This conclusion does not certify
+arbitrary PyTorch inputs or external model implementations.
+
+The [non-sensitive boundary receipt](../security/JIT_BOUNDARY_REVIEW.json) records
+source bindings, dependency versions, case IDs and outcomes. Detailed crash
+inputs and private subprocess logs are not distributed. Test classes are explicit:
+
+```bash
+python -m pytest -q -m project_security_gate
+python -m pytest -q -m upstream_dependency_sentinel
+```
+
+Both remain in the canonical suite; no xfail/skip suppresses an existing check.
+The public upstream marker runs the fixed-boundary and legitimate-control checks,
+not the private native-crash matrix. A new official-reproducer failure or supported
+RCFS route is a publication blocker. These are software checks, not science.
 
 ## Historical experiment boundary
 

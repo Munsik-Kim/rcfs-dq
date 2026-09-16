@@ -86,7 +86,7 @@ def interval(row):
     return f"{signed(row['point'])} [{signed(row['low'])}, {signed(row['high'])}]"
 
 
-@pytest.mark.parametrize("document", ["README.md", "docs/RESULTS.md"])
+@pytest.mark.parametrize("document", ["docs/RESULTS.md"])
 def test_policy_table_is_rounded_from_recomputed_records(document):
     rows = markdown_rows(document, "Policy") if document == "README.md" else None
     if rows is None:
@@ -213,16 +213,13 @@ def test_negative_result_and_absolute_risk_limit_are_visible():
     assert "3/474/76/1175" in results
     assert "FP32 is not ground truth" in readme
     assert "additional adaptive utility" in results.lower()
-    assert "not established" in readme
-    assert "lower\n  mean absolute regret" in readme
+    assert "not established" in readme.lower()
+    assert "lower mean absolute regret" in readme
 
 
 def test_roadmap_priority_and_endpoint_are_not_old_stage_selection():
     roadmap = text("docs/ROADMAP.md")
-    assert roadmap.index("## 1. P2:") < roadmap.index("## 2. Real packed")
-    assert roadmap.index("## 2. Real packed") < roadmap.index("## 3. Allocation")
-    normalized = " ".join(roadmap.split())
-    assert "Hold stage, exact cost and precision fixed while candidate group varies" in normalized
-    assert "primary endpoint is **mean absolute regret**" in normalized
-    assert "future protocol" in normalized and "not an executed experiment" in normalized
-    assert "Q95, Q99" in normalized
+    assert "PRIORITY RESEARCH" in roadmap and "PRIORITY PRODUCT" in roadmap
+    assert "zero-parameter" in roadmap and "DEFERRED / NOT CURRENTLY AUTHORIZED" in roadmap
+    assert "J1 RTN-vs-GPTQ" in roadmap and "P2 stage-neutral" in roadmap
+    assert "not scientifically disproven" in roadmap

@@ -69,7 +69,7 @@ def test_python_and_version_contract():
     project = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]
     assert project["version"] == rcfs_dq.__version__ == "0.1.1"
     assert project["requires-python"] == ">=3.11,<3.13"
-    assert project["dependencies"] == ["numpy>=1.26,<2", "torch>=2.11,<2.12"]
+    assert project["dependencies"] == ["numpy>=1.26,<2", "torch>=2.14,<2.15", "setuptools>=83,<84"]
     assert project["optional-dependencies"]["dit"] == ["diffusers==0.38.0"]
 
 

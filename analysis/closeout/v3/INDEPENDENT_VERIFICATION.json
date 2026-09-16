@@ -1,0 +1,192 @@
+{
+  "bootstrap_index_sha256": "afecddc6c1a1829980177ade6960552701f9ea0664d976d7da92a0a62d1c833c",
+  "comparisons": 644747,
+  "cpu_wall_seconds": 27.640701414000432,
+  "failures": [],
+  "gpu_calls": 0,
+  "independent_decision": {
+    "A_execution_integrity": true,
+    "B_measurement_validity": true,
+    "C_by_family": {
+      "accumulated": false,
+      "actual_local": true,
+      "donor": true,
+      "isotropic": true
+    },
+    "C_primary_tangent_qualified": true,
+    "D_finite_radius_application_certified": false,
+    "D_source_ratio_failures_unique_alpha_rows": 13,
+    "H3_coverage_complete": true,
+    "J1_authorized": false,
+    "N_failed_unique_alpha_rows": 0,
+    "P2_authorized": false,
+    "R_failed_unique_alpha_rows": 0,
+    "confirmation_authorized": false,
+    "coverage_complete": true,
+    "decision": "J0_V3_MEASUREMENT_VALIDATION_COMPLETE",
+    "displayed_alpha_rows": 3456,
+    "displayed_triads": 1152,
+    "followup_executed_model_calls": 0,
+    "historical_source_L_failures_unique_alpha_rows": 13,
+    "input_bound_failures": 0,
+    "operational_bound_failures": 0,
+    "original_J0_status": "J0_NUMERICAL_METHOD_REVIEW",
+    "primary_mechanism_screen": "NOJ_OMISSION_SIGNAL_REPLICATED_IN_SCOPE",
+    "scientific_STRONG_GO": false,
+    "unique_alpha_rows": 3168,
+    "unique_triads": 1056
+  },
+  "input_inventory": [
+    {
+      "bytes": 2587048,
+      "path": "tables/finite_difference_rows.csv",
+      "rows": 3456,
+      "sha256": "84455fffa5c822f8e2165a0ffc8c20bbbb902ac5748253d1bc38077a726be1ed"
+    },
+    {
+      "bytes": 603738,
+      "path": "tables/qualification_rows.csv",
+      "rows": 3456,
+      "sha256": "a8599b53bab97cb65cde7843211b36927c0eb90d2ab5bcb758b520931650ae87"
+    },
+    {
+      "bytes": 1531722,
+      "path": "tables/prediction_rows.csv",
+      "rows": 3456,
+      "sha256": "d1ad8a65167aebe3d98856f339befe6f1de03c716f2f26002258ba64cf70fcf1"
+    },
+    {
+      "bytes": 2534315,
+      "path": "tables/tangent_remainder_decomposition.csv",
+      "rows": 3456,
+      "sha256": "753136f84354fbfeb8a61280a532ad882a974ca20ed2e5a12c194b0bd9559f9c"
+    },
+    {
+      "bytes": 1716835,
+      "path": "tables/radius_and_realization.csv",
+      "rows": 3456,
+      "sha256": "7f27b6d4615c31c00d975dd99642dd8f5f3b116c4193c3d23b566ff3095c1af0"
+    },
+    {
+      "bytes": 502433,
+      "path": "tables/signed_jacobian_components.csv",
+      "rows": 1152,
+      "sha256": "71df273daf18936309df3897bc465ca8d81fe6943970924471e7025ea4df7f55"
+    },
+    {
+      "bytes": 161594,
+      "path": "tables/triad_scaling.csv",
+      "rows": 1152,
+      "sha256": "e00f0ce2edefaadd0521fc9c70192b4d7b1846753c45ce5cd4a2667a374e3573"
+    },
+    {
+      "bytes": 4110,
+      "path": "tables/h3_rows.csv",
+      "rows": 18,
+      "sha256": "fb6bbef39d89231bb49b52298c404b3f7a9e1467ba893ed424eb1af8dab6e43c"
+    },
+    {
+      "bytes": 14185,
+      "path": "tables/class_endpoints.csv",
+      "rows": 256,
+      "sha256": "702298ef5c424c3b9790ea44daaaf3ab5f60d5f92f3551741a4868dd07090cdd"
+    },
+    {
+      "bytes": 4269,
+      "path": "tables/bootstrap_summary.csv",
+      "rows": 32,
+      "sha256": "94bdf3f679605dd1152182077bdbf41413bd0bbbe1e6426e078c90fa8469d6a8"
+    },
+    {
+      "bytes": 1490,
+      "path": "tables/paired_contrasts.csv",
+      "rows": 5,
+      "sha256": "c07e08fa8ddd252083e14e37fcea05e5dc67439ac45d33b965c457e68f675d9a"
+    },
+    {
+      "bytes": 13961,
+      "path": "tables/prediction_tail_summary.csv",
+      "rows": 72,
+      "sha256": "e3b64f89e26c0079cfae10f4e15779c3fe91cd6afb35bb91fd6eac567ac9482c"
+    },
+    {
+      "bytes": 1033,
+      "path": "manifests/DECISION.json",
+      "sha256": "5d3311eaeb6eb7689cf2eae65e57d25feaa30251c5552ed3e0628ce2e347c36d"
+    }
+  ],
+  "max_absolute_discrepancy": {
+    "abs_diff": 0.0,
+    "identity": [
+      123,
+      107,
+      "qkv_all_blocks",
+      4,
+      5,
+      "actual_local",
+      0.0078125
+    ],
+    "main": 123.0,
+    "metric": "class_id",
+    "passed": true,
+    "reference": 123,
+    "scaled_error": 0.0,
+    "table": "finite_difference_rows"
+  },
+  "max_scaled_discrepancy": {
+    "abs_diff": 0.0,
+    "identity": [
+      123,
+      107,
+      "qkv_all_blocks",
+      4,
+      5,
+      "actual_local",
+      0.0078125
+    ],
+    "main": 123.0,
+    "metric": "class_id",
+    "passed": true,
+    "reference": 123,
+    "scaled_error": 0.0,
+    "table": "finite_difference_rows"
+  },
+  "model_calls": 0,
+  "passed": true,
+  "protocol_sha256": "57bcfc37ad7bf5dee0090f3bad31c803b3cb776345f6a3f09cab50a9bb39ca7b",
+  "quantization_events": 0,
+  "raw_containers_verified": 4402,
+  "raw_index_sha256": "b8c82a0056cf5a21d96ef81945dc10f4f8f6f9ce748728553df9622d699e86d7",
+  "raw_io_integrity": {
+    "completed_weight_transactions": 306,
+    "effective_weight_modules": 140,
+    "forward_attempts": 9416,
+    "forward_completed": 9416,
+    "guard_only_restored_transactions": 0,
+    "holdout_replay_checks": 480,
+    "kind_counts": {
+      "accumulated_single_event4": 102,
+      "baseline": 34,
+      "central": 3366,
+      "h3_baseline_extension": 3,
+      "h3_extension": 81,
+      "holdout": 510,
+      "local": 306
+    },
+    "noJ_scheduler_operations": 7404,
+    "passed": true,
+    "promoted_parameters": 538,
+    "raw_containers": 4402,
+    "raw_index_sha256": "b8c82a0056cf5a21d96ef81945dc10f4f8f6f9ce748728553df9622d699e86d7",
+    "replay_containers": 282,
+    "weight_transactions": 306
+  },
+  "scope": "independent authenticated V3 raw CPU numerical verification",
+  "source_inputs_unchanged": true,
+  "tolerance": {
+    "atol": 1e-12,
+    "discrete": "exact",
+    "rtol": 1e-10
+  },
+  "unchecked_fields": 0
+}
