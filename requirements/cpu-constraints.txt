@@ -38,5 +38,5 @@ torch==2.14.0+cpu
 tqdm==4.70.1
 typing_extensions==4.16.0
 urllib3==2.7.0
-wheel==0.47.0
+wheel==0.48.0
 zipp==4.1.0
