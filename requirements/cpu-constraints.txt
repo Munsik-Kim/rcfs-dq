@@ -32,7 +32,7 @@ regex==2026.9.10
 requests==2.34.2
 ruff==0.16.3
 safetensors==0.8.0
-setuptools==83.0.0
+setuptools==84.0.0
 sympy==1.14.0
 torch==2.14.0+cpu
 tqdm==4.70.1
