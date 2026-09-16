@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "reviewed_source_commit": "e09425245490143d30e9a75d20233923b5474bdc",
+  "reachability": "UNREACHABLE_FROM_SUPPORTED_RCFS_API",
+  "scope": "Supported RCFS source/CLI/configuration-to-compiler boundary, not every upstream API.",
+  "dependency": {
+    "torch": "2.14.0+cpu",
+    "python": [
+      "3.11",
+      "3.12"
+    ]
+  },
+  "official_advisory": "https://github.com/advisories/GHSA-rrmf-rvhw-rf47",
+  "official_fix": "https://github.com/pytorch/pytorch/commit/b90c94991cdf8b87c8f7439f79518e0ef2c4ca4f",
+  "advisory_affected_range": "<=2.12.1",
+  "advisory_first_patched_version": "2.13.0",
+  "installed_version_evaluated_separately": true,
+  "official_behavior": "OFFICIAL_PATCH_BEHAVIOR_CONFIRMED",
+  "related_status": "SEPARATE_UPSTREAM_JIT_CRASH_CANDIDATE",
+  "related_same_CVE": "NOT_ESTABLISHED",
+  "rows": [
+    {
+      "reproducer_id": "OFFICIAL_CVE_REPRODUCER",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "OFFICIAL_FIX_LOCAL_LIST",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "OFFICIAL_FIX_LOCAL_TUPLE",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "RELATED_VARIANT_A",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": -11,
+      "signal": 11,
+      "controlled_exception": false,
+      "native_crash": true,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "RELATED_VARIANT_B",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": -11,
+      "signal": 11,
+      "controlled_exception": false,
+      "native_crash": true,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "LEGITIMATE_TYPED_CONTROL",
+      "python": "3.11.15 | packaged by conda-forge | (main, Mar  5 2026, 16:45:40) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": false,
+      "native_crash": false,
+      "compiled": true
+    },
+    {
+      "reproducer_id": "OFFICIAL_CVE_REPRODUCER",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "OFFICIAL_FIX_LOCAL_LIST",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "OFFICIAL_FIX_LOCAL_TUPLE",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": true,
+      "native_crash": false,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "RELATED_VARIANT_A",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": -11,
+      "signal": 11,
+      "controlled_exception": false,
+      "native_crash": true,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "RELATED_VARIANT_B",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": -11,
+      "signal": 11,
+      "controlled_exception": false,
+      "native_crash": true,
+      "compiled": false
+    },
+    {
+      "reproducer_id": "LEGITIMATE_TYPED_CONTROL",
+      "python": "3.12.12 | packaged by conda-forge | (main, Oct 22 2025, 23:25:55) [GCC 14.3.0]",
+      "torch": "2.14.0+cpu",
+      "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+      "exit_code": 0,
+      "signal": null,
+      "controlled_exception": false,
+      "native_crash": false,
+      "compiled": true
+    }
+  ],
+  "product_source_bindings": [
+    {
+      "path": "examples/compact_dit.py",
+      "sha256": "c7f033d5e8701c700b0bb23d938667933cc2d4340ded768af4e8e31ee62b6e97"
+    },
+    {
+      "path": "scripts/audit_baselines.py",
+      "sha256": "c4c6a37a36b0ddfc86d6322f2f8b2e8a10308cb58154ed2c19ccbc17119a4bac"
+    },
+    {
+      "path": "scripts/audit_pairing_ablation.py",
+      "sha256": "74a046ed3c42ee913d4615fdb051776e1e132302dcb46b263d3d75adba2504e5"
+    },
+    {
+      "path": "scripts/build_public_audit_manifest.py",
+      "sha256": "9f55cdae2ca41a03fbc09a2b346c259a5b2d50138fd37743f033cd661a4f1b0b"
+    },
+    {
+      "path": "scripts/check_public_hygiene.py",
+      "sha256": "cad033904954f96f3e765bfc548bf7c96bf232b6e35a2eed388d347927386965"
+    },
+    {
+      "path": "scripts/verify_baseline_audit.py",
+      "sha256": "26ae096e8a63cf466b7c7c9017d24ff13960cb2567f803431da3e8e096f16782"
+    },
+    {
+      "path": "scripts/verify_closeout_evidence.py",
+      "sha256": "5bf8301ca6101a23d74ef78438ce19b0b11064ca41bec71ebe79d7f5e99663fd"
+    },
+    {
+      "path": "scripts/verify_evidence.py",
+      "sha256": "b65cd4ac90e8cc62de1618f0c73bd0b64cef2096730dfa6967bdd40db600c026"
+    },
+    {
+      "path": "scripts/verify_public_audits.py",
+      "sha256": "3b1605fca13fff6de1d54b585c50f8a0cd4deb408ca8ad2dede44b47a4fe1e53"
+    },
+    {
+      "path": "src/rcfs_dq/__init__.py",
+      "sha256": "53009c80f5531cea44c9a889383fb1325a7e16ee6f99ef817de414c00623b879"
+    },
+    {
+      "path": "src/rcfs_dq/baseline_audit.py",
+      "sha256": "b5735842a85fb530e85c0172e4b97a6646173de37950c25518e133e5334d3def"
+    },
+    {
+      "path": "src/rcfs_dq/baseline_independent.py",
+      "sha256": "52b25428a30973456b0b01938f2d8ae0f586c7a594c6fd32feb3da9bf1ff1910"
+    },
+    {
+      "path": "src/rcfs_dq/closeout_verification.py",
+      "sha256": "d3c820bf21183325077f5af1249f336d3f1534dab3ca89dc295161c28c409d51"
+    },
+    {
+      "path": "src/rcfs_dq/controls.py",
+      "sha256": "0f3aa58c6a74f8eeeb5d5519bc6be73bfefad19936d99bcd10c7b12724ec2baf"
+    },
+    {
+      "path": "src/rcfs_dq/decisions.py",
+      "sha256": "92048a39019cb3a5fb5e681749d01200078b4856a79c0bc3780cdccf31803696"
+    },
+    {
+      "path": "src/rcfs_dq/dit_adapter.py",
+      "sha256": "f5af50e86422a4d964a060c8bc902f03ad84d229443006b94fdcdd1081e08f33"
+    },
+    {
+      "path": "src/rcfs_dq/geometry.py",
+      "sha256": "c1875bd9226ae08d1c98cf92e72f85b18fc218c8c62c93176b598ea88ffc4f3d"
+    },
+    {
+      "path": "src/rcfs_dq/pairing_audit.py",
+      "sha256": "4bbd3fc700c79db4c11d4199e7e52159342b5f5d497f590cb5b3df52e4a5b434"
+    },
+    {
+      "path": "src/rcfs_dq/pairing_independent.py",
+      "sha256": "15adb729de885d58e24cde04f2700cf0fc255025dcc7b87a9dcab536447dab5a"
+    },
+    {
+      "path": "src/rcfs_dq/public_audits.py",
+      "sha256": "f967fad2bd2cc6ae80e1707e2e3331bde5e607c8daf0e0e3fa4974492b8784b7"
+    },
+    {
+      "path": "src/rcfs_dq/public_hygiene.py",
+      "sha256": "f9291c948011b4ddb615c1c67d6ce55a9cc8c566251d56d8e1c23fb9fa88f4a9"
+    },
+    {
+      "path": "src/rcfs_dq/quantization.py",
+      "sha256": "6daa9193ec253c7cbb157665362918df5c310d3420ac406d2c159f6ac23c4361"
+    },
+    {
+      "path": "src/rcfs_dq/residuals.py",
+      "sha256": "9f4e528eadb3933b0ac56532b0af7bd3dcb5796c60425eba1fb6c78a8d028bd3"
+    },
+    {
+      "path": "src/rcfs_dq/scoring.py",
+      "sha256": "ec595c6c1b5fc51ebf6979091b92a8a44cce809793c1e294f7920ab25b8fd639"
+    },
+    {
+      "path": "src/rcfs_dq/verification.py",
+      "sha256": "a1cf3881c328fcb166ae094422a925b2c139ad972ee78138f2a1dcf586e4fa61"
+    }
+  ],
+  "counterevidence": [
+    "Constructed models/schedulers/callbacks can execute their own trusted code; adapter is not a sandbox or strict nn.Module validator.",
+    "Absence of all dependency-internal JIT behavior is not claimed; no supported RCFS source/config input route reaches the stress compiler sinks."
+  ],
+  "change_trigger": "Re-review any new source compiler, model loader, plugin or config-to-code path.",
+  "public_tests": "Existing fixed-boundary regressions remain active; private related stress payloads are not distributed.",
+  "new_scientific_model_calls": 0,
+  "new_GPU_calls": 0,
+  "security_certification": false,
+  "detailed_reproducers_included": false,
+  "upstream_submission_performed": false
+}

@@ -4,6 +4,10 @@
 
 ### Dependency security
 
+- Separate project input/build/install gates from direct upstream JIT sentinels;
+  retain the related native-crash observations without publishing their payloads.
+- Record the supported API reachability boundary and official-advisory distinction.
+  This does not assert that all PyTorch JIT inputs are safe or change any science.
 - Raise the current public runtime to torch >=2.14,<2.15 (CPU CI: 2.14.0+cpu)
   and both runtime and isolated-build setuptools requirements to >=83,<84
   (CI: 83.0.0). Include the build frontend in the test extra.

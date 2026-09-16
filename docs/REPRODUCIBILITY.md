@@ -177,6 +177,37 @@ Direct legacy distutils packaging is outside this build contract; its helper
 is not certified by the setuptools-backend exclusion check.
 Historical environment records and all scientific scalar payloads remain unchanged.
 
+### Project boundary versus upstream JIT stress
+
+RCFS-DQ has no supported TorchScript source input or checkpoint deserializer.
+The adapter receives already-constructed trusted Python model/scheduler objects;
+continuation/update callbacks are executable caller code, not sandboxed inputs.
+Direct upstream JIT use is outside this input boundary. Do not execute untrusted
+model code, source, checkpoints or pickle/Python artifacts because an installed
+dependency version happens to accept them. See [the security policy](../SECURITY.md).
+
+The advisory-linked original reproducer and fixed assignment regressions rejected
+with controlled exceptions on the pinned CPU environment. Two related type-path
+variants still produced native crashes in isolated Python 3.11/3.12 subprocesses.
+Those observations are retained as separate upstream candidates, not attributed
+to the same CVE and not described as fixed. The traced supported RCFS path does
+not compile or deserialize their inputs. This conclusion does not certify
+arbitrary PyTorch inputs or external model implementations.
+
+The [non-sensitive boundary receipt](../security/JIT_BOUNDARY_REVIEW.json) records
+source bindings, dependency versions, case IDs and outcomes. Detailed crash
+inputs and private subprocess logs are not distributed. Test classes are explicit:
+
+```bash
+python -m pytest -q -m project_security_gate
+python -m pytest -q -m upstream_dependency_sentinel
+```
+
+Both remain in the canonical suite; no xfail/skip suppresses an existing check.
+The public upstream marker runs the fixed-boundary and legitimate-control checks,
+not the private native-crash matrix. A new official-reproducer failure or supported
+RCFS route is a publication blocker. These are software checks, not science.
+
 ## Historical experiment boundary
 
 The model identifier is `facebook/DiT-XL-2-256`, revision

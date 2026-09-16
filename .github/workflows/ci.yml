@@ -51,7 +51,10 @@ jobs:
         run: |
           python -I -c 'import pathlib, sysconfig, rcfs_dq; p = pathlib.Path(rcfs_dq.__file__).resolve(); assert p.is_relative_to(pathlib.Path(sysconfig.get_paths()["purelib"]).resolve()); assert rcfs_dq.__version__ == "0.1.1"; print(p, rcfs_dq.__version__)'
       - name: Core, regressions and public hygiene
-        run: python -m pytest -q
+        run: |
+          python -m pytest -q
+          python -m pytest -q -m project_security_gate
+          python -m pytest -q -m upstream_dependency_sentinel
       - name: Verify scalar evidence and protected hashes
         run: |
           python scripts/verify_evidence.py
