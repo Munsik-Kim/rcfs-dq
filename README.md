@@ -1,9 +1,10 @@
 # RCFS-DQ
 
-RCFS-DQ studies whether actual weight-quantization residuals interact with
-future-sensitive diffusion geometry, and whether measuring that information
-helps prediction or decisions beyond strong simple baselines. It provides
-measurement primitives and auditable evidence—not a deployment optimizer.
+Built measurement code to test when rounding diffusion-model weights changes later predictions, and whether those measurements help choose better settings. The project compares geometry-based signals with simple baselines and preserves the cases where predictive gains did not lead to better decisions.
+
+**Munsik Kim** · [Research summary](docs/RESEARCH_SUMMARY.md) · [Reusable code](docs/CORE_MAP.md)
+
+Here, a quantization residual is the difference between an original weight and its rounded value. The geometry describes how the model responds to that difference.
 
 **Actual residual → geometry and strong-baseline audit → scoped local prediction
 → natural-error limitation.**
